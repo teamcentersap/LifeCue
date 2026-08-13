@@ -1,0 +1,87 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Xcode user-specific / local
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.xcworkspace/xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xcode build / derived
+build/
+Build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Swift Package Manager
+.build/
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+Packages/
+Package.resolved
+
+# CocoaPods / Carthage (not used, but keep out if added locally)
+Pods/
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+fastlane/readme.md
+
+# Signing / secrets — never commit
+*.p12
+*.p8
+*.cer
+*.certSigningRequest
+*.mobileprovision
+*.provisionprofile
+*.pem
+*.key
+*.der
+.env
+.env.*
+!.env.example
+secrets/
+credentials.json
+AuthKey_*.p8
+*.jks
+*.keystore
+
+# Playgrounds timeline (local)
+timeline.xctimeline
+playground.xcworkspace
+
+# Coverage / test artifacts
+*.gcno
+*.gcda
+coverage/
+*.xcresult
+
+# Temporary / logs
+*.log
+*.tmp
+tmp/
+.idea/
+.vscode/
+*.swp
+*~

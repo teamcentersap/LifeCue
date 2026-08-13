@@ -1,0 +1,1205 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0144F67C8A2F421AAA490AAD /* LifeCue/Services/Forward/ForwardSharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A38169574674C889CF23970 /* LifeCue/Services/Forward/ForwardSharingService.swift */; };
+		07586F0266F74A4B809927CF /* LifeCue/Features/Capture/TransferableImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403437D7A54142B9BF9C3CFE /* LifeCue/Features/Capture/TransferableImageData.swift */; };
+		08875C82801E4EEFA333A906 /* LifeCue/Domain/ReminderEngine/ReminderRuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C22B81B7634B73A4633E6C /* LifeCue/Domain/ReminderEngine/ReminderRuleEngine.swift */; };
+		0BFCE1A0B02B4C6F828935AE /* LifeCue/Domain/Models/ReminderDisplayFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB4222956E458292205593 /* LifeCue/Domain/Models/ReminderDisplayFormatter.swift */; };
+		0E552117558F408AA3D2ADD2 /* LifeCue/Domain/Calendar/CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB177799BA77410CADBC8BF9 /* LifeCue/Domain/Calendar/CalendarEvent.swift */; };
+		0F25E7F3667C44F1B52FE603 /* LifeCue/Features/People/PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F6B6A8E994125B8A45D74 /* LifeCue/Features/People/PeopleListView.swift */; };
+		0F419C8D49884493BFF2AB44 /* LifeCue/Features/Home/ReminderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A730FC6A8341748CDB4EAD /* LifeCue/Features/Home/ReminderListViewModel.swift */; };
+		1025F3007370483C8F1C72D5 /* LifeCue/Domain/Backup/LifeCueBackupMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036373327C54F11AB940797 /* LifeCue/Domain/Backup/LifeCueBackupMapper.swift */; };
+		12258A67D71243D287B50031 /* LifeCue/Features/Capture/OCRResultViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868467517C7742FA8F7467D3 /* LifeCue/Features/Capture/OCRResultViews.swift */; };
+		123CD3BFD3C34A9CB0BBC640 /* LifeCueTests/ReminderScheduleRaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02999CE62E6049F6AFED20BF /* LifeCueTests/ReminderScheduleRaceTests.swift */; };
+		14DFD6CC62BF46EEB86817D4 /* LifeCue/Domain/Calendar/CalendarEventPrefill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB96A330E64100B1E87B00 /* LifeCue/Domain/Calendar/CalendarEventPrefill.swift */; };
+		1A060B7197C84B9CA38131BF /* LifeCue/Features/Capture/ImageCaptureFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB01C099554552B6F57500 /* LifeCue/Features/Capture/ImageCaptureFlowView.swift */; };
+		1B2CA2972F164E3C9FEC34F0 /* LifeCue/Services/OCR/OCRServing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA365D60508746BA87486154 /* LifeCue/Services/OCR/OCRServing.swift */; };
+		1C94D32A0835457381E4E42F /* LifeCue/Features/More/MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33D5062B7B045B982E4D2B0 /* LifeCue/Features/More/MoreView.swift */; };
+		1D0AA00422AD433C95295AB5 /* LifeCue/Services/Persistence/ReminderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4675567F95435CAAE9CB15 /* LifeCue/Services/Persistence/ReminderRepository.swift */; };
+		1E73E122677F43DD85F97C8E /* LifeCueTests/ReminderSprint17ReliabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89B7DE95EE47E88A6D165A /* LifeCueTests/ReminderSprint17ReliabilityTests.swift */; };
+		1EE606B50BD84099BCF4BDFA /* LifeCueTests/ReminderNotificationLifecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C4FAD7C8247D58CE2C2C5 /* LifeCueTests/ReminderNotificationLifecycleTests.swift */; };
+		204EF484DAFB4579B9B4C358 /* LifeCue/Domain/Models/OrganizationListScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349DD58B066B4772807730AE /* LifeCue/Domain/Models/OrganizationListScope.swift */; };
+		20F6F1F5061E4CB1ABCCFD86 /* LifeCue/Features/Capture/ExtractionReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256A84A91CC4C97A5A80AC3 /* LifeCue/Features/Capture/ExtractionReviewViewModel.swift */; };
+		22697BE00287456AADF30ED3 /* LifeCueTests/ReminderSprint7PeopleContextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF994FC4E264735A588BCC0 /* LifeCueTests/ReminderSprint7PeopleContextTests.swift */; };
+		2563BC7B32FB4BE490ED3C41 /* LifeCueTests/ReminderModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7086218C15AE4193A198CA3A /* LifeCueTests/ReminderModelTests.swift */; };
+		29D543FBA4B5419CB54B0862 /* LifeCue/Features/Settings/SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E243607CEB4F7AB7EFC8C2 /* LifeCue/Features/Settings/SettingsView.swift */; };
+		2A270F0BF304434683023058 /* LifeCueTests/CalendarMonthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87762132A0E545DABA13AD68 /* LifeCueTests/CalendarMonthTests.swift */; };
+		2EA1F373A18C45ACA19E1873 /* LifeCue/Domain/Backup/BackupValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C846F3D2907145FF8841919E /* LifeCue/Domain/Backup/BackupValidation.swift */; };
+		2F57A26EAEE9472C98D27A66 /* LifeCue/Features/Capture/ImageCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B1810B0A464DCBBD52A9B3 /* LifeCue/Features/Capture/ImageCaptureViewModel.swift */; };
+		2F6A091043734CC4996A6920 /* LifeCue/Services/Persistence/InMemoryReminderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269940F1721B4F0EA7EB9F68 /* LifeCue/Services/Persistence/InMemoryReminderRepository.swift */; };
+		2FA0E287063C414CB1996F44 /* LifeCue/Features/Settings/PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0068969B69C84279BDE817F8 /* LifeCue/Features/Settings/PrivacyView.swift */; };
+		3067CAABD3574B90BE98AD62 /* LifeCueTests/ReminderSprint14BackupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F355013F0F4DEBA21649B2 /* LifeCueTests/ReminderSprint14BackupTests.swift */; };
+		323D59D1A3E345B0A9A9FBE5 /* LifeCue/Features/Settings/AboutLifeCueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB498CE9EF94719B19F0173 /* LifeCue/Features/Settings/AboutLifeCueView.swift */; };
+		33BD29FD84264DC1A0AFB096 /* LifeCue/Services/Backup/BackupStoreReplacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7D38D05A9245FEBEBA9430 /* LifeCue/Services/Backup/BackupStoreReplacing.swift */; };
+		3407D8B82D6D4C7C9F631939 /* LifeCue/Features/Backup/BackupRestoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF44BA505C443448FB65DEC /* LifeCue/Features/Backup/BackupRestoreView.swift */; };
+		34269BAD98CE4CC2805DC65C /* LifeCue/Services/Notifications/UserNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E890577974340ABC32B94 /* LifeCue/Services/Notifications/UserNotificationScheduler.swift */; };
+		3484DFC87AF44CA0B03926C1 /* LifeCue/Domain/Models/ReminderRecurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D241D72842481F960F6FBB /* LifeCue/Domain/Models/ReminderRecurrence.swift */; };
+		36C94907CFFC4103A5D4A58C /* LifeCue/Domain/Extraction/ReminderDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A41857F0DD496EA3215943 /* LifeCue/Domain/Extraction/ReminderDraft.swift */; };
+		3AB0FAAF07E84257A8B40EF9 /* LifeCue/Features/Root/RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A756C6FBEB497BBE871215 /* LifeCue/Features/Root/RootView.swift */; };
+		3E82B3A6A838439AAFFD0B69 /* LifeCue/Domain/Models/OrganizationDeletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C009B9C4740FCA9ADE3DA /* LifeCue/Domain/Models/OrganizationDeletion.swift */; };
+		3EF60F4B1DEC4751849DABE5 /* LifeCue/Services/Persistence/ContextRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B909069A84DBAA0047918 /* LifeCue/Services/Persistence/ContextRepository.swift */; };
+		4022CCEA1CE54D5795402133 /* LifeCue/Services/Persistence/SwiftDataReminderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE492C8A855A4BFA8AC51B7B /* LifeCue/Services/Persistence/SwiftDataReminderRepository.swift */; };
+		4130CDF34D1A4DADA47C8CD4 /* LifeCue/Features/Home/HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AEF53B5A0849F48E1BF520 /* LifeCue/Features/Home/HomeView.swift */; };
+		431A82717FB24AB2BC3401C4 /* LifeCueTests/ReminderSprint13OCRExtractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72319279BE044FEF90918B8A /* LifeCueTests/ReminderSprint13OCRExtractionTests.swift */; };
+		43696F05ABA84D65990A03DA /* LifeCue/Services/Notifications/NotificationNavigationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F16D10CA72A41A5BD2CE417 /* LifeCue/Services/Notifications/NotificationNavigationStore.swift */; };
+		44678F69D5E14EC498DA45BE /* LifeCue/Services/Notifications/NotificationContentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743E08A79D77492FAE3D690C /* LifeCue/Services/Notifications/NotificationContentBuilder.swift */; };
+		481E35BE667E45CFBF870717 /* LifeCueTests/ReminderWeekdaySelectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D1BB2760745BDAAECADD7 /* LifeCueTests/ReminderWeekdaySelectorUITests.swift */; };
+		49320C9C57AC4DFA83E23193 /* LifeCue/Domain/Backup/BackupReminderInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161F17512B71477F80E1129F /* LifeCue/Domain/Backup/BackupReminderInterval.swift */; };
+		4B9B455C2B164482B305E5D0 /* LifeCue/Services/Notifications/NotificationTapRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B7A8CF4BB84109AD1B1202 /* LifeCue/Services/Notifications/NotificationTapRouting.swift */; };
+		501AD1ECBFFD45EAB6CF0944 /* LifeCue/Domain/OCR/OCRResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138AE16A12A946E69924B5EB /* LifeCue/Domain/OCR/OCRResult.swift */; };
+		5061D209E953451794B82495 /* LifeCueTests/CalendarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C344B09F56424E669858E00A /* LifeCueTests/CalendarServiceTests.swift */; };
+		519AA15B7C4D4DECB5F5C33D /* LifeCue/Domain/Models/NotificationReconcileResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6584324F3B5447EB1CDF10E /* LifeCue/Domain/Models/NotificationReconcileResult.swift */; };
+		56669EFFBFF44B7AB090B72A /* LifeCue/Domain/Extraction/ReminderDraftConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88603CDBF3B44A5C8053F3EF /* LifeCue/Domain/Extraction/ReminderDraftConverter.swift */; };
+		56DD0A87243E4ADBA8A1B8CF /* LifeCue/Domain/Models/ContextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292E43FBEBC24EBF81689B79 /* LifeCue/Domain/Models/ContextService.swift */; };
+		5B4697A78EFC4EF9821F6577 /* LifeCueTests/ReminderSprint8ForwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3822F359A275427DA8FFD61B /* LifeCueTests/ReminderSprint8ForwardTests.swift */; };
+		5B5E382E5CE64F4EBC6EB920 /* LifeCue/Services/Persistence/LifeCueAppBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF7062E54E74F93811FAF01 /* LifeCue/Services/Persistence/LifeCueAppBootstrap.swift */; };
+		5BEBFC7FB67946269B0F6C4A /* LifeCue/Domain/Models/ReminderForwardFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BFF6A3CDF44C2787CF5D91 /* LifeCue/Domain/Models/ReminderForwardFormatter.swift */; };
+		5CD3A501A666413A8C423B0F /* LifeCue/Domain/Models/ReminderRuleDisplayFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04644E0864B64B61BDBC9323 /* LifeCue/Domain/Models/ReminderRuleDisplayFormatter.swift */; };
+		5D8A556846B4479EA43603A8 /* LifeCue/Services/Backup/BackupExportImportServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2E88AD8E949EFA41C2AE6 /* LifeCue/Services/Backup/BackupExportImportServices.swift */; };
+		5FCDA240D43147E284F67B5B /* LifeCueTests/ReminderSprint15HelpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7732ADAA622D47E2970A0979 /* LifeCueTests/ReminderSprint15HelpTests.swift */; };
+		5FD667E39C154ACDA5DB3291 /* LifeCueTests/ReminderDateWindowDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F24660D8CA4082AF14B9A7 /* LifeCueTests/ReminderDateWindowDefaultTests.swift */; };
+		60E0D6C3E34E485CAF00E8DC /* LifeCue/Services/Extraction/ReminderTextExtracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36911FE584C543BCA2F3EFFB /* LifeCue/Services/Extraction/ReminderTextExtracting.swift */; };
+		61B33C47298A4F6F994D778A /* LifeCue/Services/Extraction/FakeReminderTextExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68FF8955DE4718B6595D23 /* LifeCue/Services/Extraction/FakeReminderTextExtractor.swift */; };
+		61BE169E18DB4721B2364E9E /* LifeCue/Features/Help/HelpContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9B67F18304DC88C44B6F1 /* LifeCue/Features/Help/HelpContent.swift */; };
+		643EBF995E4E454FA5139061 /* LifeCue/Services/Notifications/DelayedNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5E3C3A109417F82BCFBF9 /* LifeCue/Services/Notifications/DelayedNotificationScheduler.swift */; };
+		655D51023A41496889084F2C /* LifeCue/Features/Reminder/ReminderOrganizationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED77929BDFE4005ADFD85BA /* LifeCue/Features/Reminder/ReminderOrganizationSection.swift */; };
+		6609247F10074C7CB0F050B8 /* LifeCue/Services/Extraction/DeterministicReminderTextExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960F3130042B488494F3D503 /* LifeCue/Services/Extraction/DeterministicReminderTextExtractor.swift */; };
+		6B2A73E7BBB44461A4273C8F /* LifeCueTests/ReminderTimezoneDisplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE94424CF7834999AB6ADA0B /* LifeCueTests/ReminderTimezoneDisplayTests.swift */; };
+		6D1E869ADC2D4C85B1698812 /* LifeCue/Services/Notifications/NotificationScheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C4FCF9CFF0446FAF01B92E /* LifeCue/Services/Notifications/NotificationScheduling.swift */; };
+		70162E19F1C44F87A555CE7F /* LifeCue/Domain/Models/ReminderContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0662474397C44750BA92D8DE /* LifeCue/Domain/Models/ReminderContext.swift */; };
+		709D0DB66D444360A2057BD2 /* LifeCue/Services/Backup/BackupReminderScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DC131C3E9F492F9C1D3AE7 /* LifeCue/Services/Backup/BackupReminderScheduler.swift */; };
+		7344B26CD69F43BAAB56AB68 /* LifeCueTests/ReminderSprint19UnarchiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED22F274664BA8A46BCCEF /* LifeCueTests/ReminderSprint19UnarchiveTests.swift */; };
+		7505433004F540F3BE40C38A /* LifeCue/Services/Calendar/FakeCalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC30AFDE2D45B6944AC8DD /* LifeCue/Services/Calendar/FakeCalendarService.swift */; };
+		753C4E8DF77E484384C6D33D /* LifeCue/Services/Calendar/CalendarServing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00293F46747B4D0F837BE86A /* LifeCue/Services/Calendar/CalendarServing.swift */; };
+		77410EEFD52F455E808A9181 /* LifeCue/Services/Notifications/LifeCueNotificationCenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CC07DC74E4D45935E913C /* LifeCue/Services/Notifications/LifeCueNotificationCenterDelegate.swift */; };
+		79D3F090C2194918A6AD61D9 /* LifeCue/Features/Calendar/CalendarMonthIndexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B2B8537E54D169DDB7A3E /* LifeCue/Features/Calendar/CalendarMonthIndexer.swift */; };
+		7E41B040BBCC45DBAC927BBD /* LifeCueTests/LifeCueNotificationCenterDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A95F705FE42D687C40BA1 /* LifeCueTests/LifeCueNotificationCenterDelegateTests.swift */; };
+		7FAC37FD58444900AD4B0F93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A347E6CB7C464591A83100 /* Assets.xcassets */; };
+		80E87C26394E4662B39EBE87 /* LifeCue/Features/Reminder/ForwardReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55414F3A30074D2B817B296B /* LifeCue/Features/Reminder/ForwardReminderView.swift */; };
+		824C62F8532D4880A4B9EDFA /* LifeCue/Domain/Extraction/ExtractionFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B38424B4D4D7DAD045245 /* LifeCue/Domain/Extraction/ExtractionFieldState.swift */; };
+		8579A4D0E4494B8191484BF3 /* LifeCue/Services/Settings/LifeCueSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249B00A4F6AC4D98B67DE720 /* LifeCue/Services/Settings/LifeCueSettings.swift */; };
+		861D7FE234E44FF6A06FF7C9 /* LifeCueTests/ReminderSprint20ReliabilityQATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA41FBABAE7C4AF4820633EE /* LifeCueTests/ReminderSprint20ReliabilityQATests.swift */; };
+		87464BEC134F4D03A70EC034 /* LifeCue/Services/OCR/FakeOCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554C1C2672854BB6879EC388 /* LifeCue/Services/OCR/FakeOCRService.swift */; };
+		874FCFAD37A343D4972B04C2 /* LifeCue/Features/Capture/ExtractionReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0242416E11949FC82381363 /* LifeCue/Features/Capture/ExtractionReviewView.swift */; };
+		88D5E8264B4943EF8AA25D14 /* LifeCueTests/ReminderSprint15BackupReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B03876A69841C5BAB76F7C /* LifeCueTests/ReminderSprint15BackupReminderTests.swift */; };
+		8CF52C1BE0834DB18A012857 /* LifeCue/Features/Reminder/AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EF76DD255E41389CA02CED /* LifeCue/Features/Reminder/AddReminderView.swift */; };
+		92FA9390014E466E82C489C5 /* LifeCueTests/ReminderTextExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACFCC96579A43C393777F0E /* LifeCueTests/ReminderTextExtractorTests.swift */; };
+		93156B4AA952422DAF2320A6 /* LifeCue/Services/Notifications/FakeNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2CD7DD26E3422C83D08E83 /* LifeCue/Services/Notifications/FakeNotificationScheduler.swift */; };
+		953A1CD4BF744DFFB1860920 /* LifeCue/Features/Calendar/CalendarUpcomingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6285D0F364144FC81C243FF /* LifeCue/Features/Calendar/CalendarUpcomingViewModel.swift */; };
+		95956631E155413CBF2256D2 /* LifeCue/App/LifeCueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2C29041734B1A92675AED /* LifeCue/App/LifeCueApp.swift */; };
+		9933DB57C15649639DEF389B /* LifeCueTests/PeopleContextCreationPresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6B8222C90413DB2F79AE1 /* LifeCueTests/PeopleContextCreationPresentationTests.swift */; };
+		9A2BC587D1024742B7F0A772 /* LifeCueTests/ReminderSprint61ReliabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330B3928AFE7447298E1D66A /* LifeCueTests/ReminderSprint61ReliabilityTests.swift */; };
+		9A6509E70F874F92AD5072A9 /* LifeCueTests/ReminderSprint18DeletionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38D071D8F8A48A9A5C53194 /* LifeCueTests/ReminderSprint18DeletionTests.swift */; };
+		9DACBDCD9F3D4114A451EF05 /* LifeCue/Services/Extraction/ExtractionDateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E6781BFDFB4EF4AB5E69CB /* LifeCue/Services/Extraction/ExtractionDateParser.swift */; };
+		9DECDB95E3B14992B54D405C /* LifeCueTests/ReminderSprint16SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2E86E30874B63A5450CA7 /* LifeCueTests/ReminderSprint16SettingsTests.swift */; };
+		9E4D0C4A31AA4B5E8BF26EFB /* LifeCue/Domain/Models/ReminderRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D571C96C646844D68DA4DFF0 /* LifeCue/Domain/Models/ReminderRule.swift */; };
+		A559115183464586B9A0A07F /* LifeCue/Features/Reminder/EditReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0637947F5E4139B60C1B86 /* LifeCue/Features/Reminder/EditReminderView.swift */; };
+		A6826E1208A44497A0D00728 /* LifeCue/Services/Persistence/PersonRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88F89A896B44364943798DA /* LifeCue/Services/Persistence/PersonRecord.swift */; };
+		AD9220A520A545CC81971C5F /* LifeCueTests/ReminderHomeFilteringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576387641AD94913869B2E37 /* LifeCueTests/ReminderHomeFilteringTests.swift */; };
+		AF0E162507EC4632873CE4AA /* LifeCue/Domain/ReminderEngine/ReminderSchedulingPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C6B9E28F2410FBF4580CB /* LifeCue/Domain/ReminderEngine/ReminderSchedulingPolicy.swift */; };
+		B0759F4802954FF09BB59942 /* LifeCueTests/ReminderRuleCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3ED606AB74475B786DEB9 /* LifeCueTests/ReminderRuleCodingTests.swift */; };
+		B27355F9DF3843C8BD98669A /* LifeCueTests/ReminderSprint62CapacityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DAEFD909D0487F94952732 /* LifeCueTests/ReminderSprint62CapacityTests.swift */; };
+		B3A319848F524DA9AECDB245 /* LifeCue/Domain/Models/Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF722C937A40E9A84D1E50 /* LifeCue/Domain/Models/Reminder.swift */; };
+		B5A5F8F8DD89415291F03544 /* LifeCue/DesignSystem/LifeCueTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6914DD7A8E48CEA4137F5A /* LifeCue/DesignSystem/LifeCueTheme.swift */; };
+		B5AB55A2FF654500B39F8D05 /* LifeCue/Features/Calendar/CalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B4DFC610D04C4480B7DC23 /* LifeCue/Features/Calendar/CalendarMonthView.swift */; };
+		B86C4FDC09DE415288C23EE7 /* LifeCue/Domain/Models/PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD99BF6744A4471AA390C42B /* LifeCue/Domain/Models/PersonService.swift */; };
+		B92536C86403473FBC5BB4A4 /* LifeCueTests/ReminderHomeClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A506504268C421EB28A1A0F /* LifeCueTests/ReminderHomeClassifierTests.swift */; };
+		BCC2F06EDC93405C91B894B0 /* LifeCue/Features/Reminder/ReminderScheduleFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742266C476DC495BA40999EB /* LifeCue/Features/Reminder/ReminderScheduleFormModel.swift */; };
+		BE380E95811448C5B66AA6BA /* LifeCue/Features/Calendar/CalendarMonthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327325CB4CFB42A7B0153699 /* LifeCue/Features/Calendar/CalendarMonthViewModel.swift */; };
+		BF23404CF46148EE8EF69C63 /* LifeCueTests/ReminderRecurrenceEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57B333D4CB46518571B5C7 /* LifeCueTests/ReminderRecurrenceEngineTests.swift */; };
+		C0177D202D0242AA87C7EA56 /* LifeCue/Domain/Models/Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E748FE1950B4A7B9C5CDE7E /* LifeCue/Domain/Models/Person.swift */; };
+		C068D4AA95C04272BC67D8C6 /* LifeCue/Services/Persistence/PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E732CC7234B6591EBA8BE /* LifeCue/Services/Persistence/PersonRepository.swift */; };
+		C3A8D83075E5416FA3D7232B /* LifeCueTests/ReminderRuleEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6AFC58D1A646F494B6146F /* LifeCueTests/ReminderRuleEngineTests.swift */; };
+		C4CC5B7FDDA640CD82CC4FFD /* LifeCue/Services/Persistence/ContextRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C720C991A546EB94378E0E /* LifeCue/Services/Persistence/ContextRecord.swift */; };
+		C6F61AAC473C41AF8E2F02BF /* LifeCue/Features/Help/HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65D462F9454FE880F2A3EA /* LifeCue/Features/Help/HelpView.swift */; };
+		CA59769E60A645879F9B674E /* LifeCue/Services/Backup/LifeCueBackupFileDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7FD4CBBED44D9086F9DFE5 /* LifeCue/Services/Backup/LifeCueBackupFileDocument.swift */; };
+		CAD1A50F10CD402D94B2019E /* LifeCueTests/OCRServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFD24233E4142E8B40B2CB0 /* LifeCueTests/OCRServiceTests.swift */; };
+		CF191BD67D854695A2FB9A00 /* LifeCueTests/SwiftDataReminderRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20ED5EC8CB94961AFD39517 /* LifeCueTests/SwiftDataReminderRepositoryTests.swift */; };
+		D1B4BDFB3EF948EC9D45824C /* LifeCue/Services/Notifications/BackupReminderNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D38F520D2F428C8E77A502 /* LifeCue/Services/Notifications/BackupReminderNotification.swift */; };
+		D6D0B9773FA745D891C73245 /* LifeCue/Features/Root/PersistenceFailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA58E3AA9A34FB392FE926D /* LifeCue/Features/Root/PersistenceFailureView.swift */; };
+		D9A8F04FE2D6499F942507F4 /* LifeCue/Features/More/MoreNavigationPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4B9D522314DBBA35E469B /* LifeCue/Features/More/MoreNavigationPresentation.swift */; };
+		DE60BF44E2344F4AAFAFAA9F /* LifeCue/Features/Calendar/CalendarEventDisplayFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EE597F1BC43668CABB108 /* LifeCue/Features/Calendar/CalendarEventDisplayFormatter.swift */; };
+		E01684148D4946CB9C14B9DA /* LifeCue/Features/People/ContextsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79EBB1A29447809A219E7C /* LifeCue/Features/People/ContextsListView.swift */; };
+		E116073FEF2D4049A986F0DB /* LifeCue/Domain/Models/ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52785F6C9FAE42128A7E60D0 /* LifeCue/Domain/Models/ReminderService.swift */; };
+		E1E79906BAB5420F96F47A15 /* LifeCue/Domain/Models/ReminderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1815D3A596A4D50A09C8AE0 /* LifeCue/Domain/Models/ReminderStatus.swift */; };
+		E230EADAE59743ECA30CF613 /* LifeCueTests/ProjectSourceSyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1A2DE6521430A954C1104 /* LifeCueTests/ProjectSourceSyncTests.swift */; };
+		E32F93A513A541C7BED03510 /* LifeCue/Domain/Models/ReminderMetadataResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F8B6556A4474792D46E16 /* LifeCue/Domain/Models/ReminderMetadataResolver.swift */; };
+		E345580894A14B79A3D197C7 /* LifeCue/Services/Calendar/EventKitCalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC779EB3F2A4DBB8AC74A7D /* LifeCue/Services/Calendar/EventKitCalendarService.swift */; };
+		E59C188487B040D3BBC7BF8E /* LifeCue/Features/Calendar/CalendarUpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D0F3B24C49483282ED30E9 /* LifeCue/Features/Calendar/CalendarUpcomingView.swift */; };
+		E5CEF8BA3C194191BD531C7F /* LifeCueTests/ExtractionReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE3698E863D45F789599C39 /* LifeCueTests/ExtractionReviewTests.swift */; };
+		EA79FAE954DD41BEBC991954 /* LifeCue/Features/Backup/BackupRestorePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F8F574B8646B0AD549DCB /* LifeCue/Features/Backup/BackupRestorePresentation.swift */; };
+		EC4D162D3C0F463297816D89 /* LifeCue/Features/Reminder/ReminderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191314DA2A84B45BEEA3EC6 /* LifeCue/Features/Reminder/ReminderDetailView.swift */; };
+		ED870C8027F84660AB5153EE /* LifeCue/Services/Persistence/ReminderRuleCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1E1A2329F4652A5DF2A5C /* LifeCue/Services/Persistence/ReminderRuleCoding.swift */; };
+		EFF2D4CB1E6446778D6FD2DA /* LifeCue/Features/Placeholders/PlaceholderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00A33E0DFA5428C98427ADC /* LifeCue/Features/Placeholders/PlaceholderTabView.swift */; };
+		F2D94D9755C6464FB785505E /* LifeCue/Domain/Classification/ReminderHomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B272D64F74D6F9E129013 /* LifeCue/Domain/Classification/ReminderHomeSection.swift */; };
+		F33936386F584ABCB17963CF /* LifeCue/Services/Persistence/ReminderRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E431F3172EE4ABD85CA4B56 /* LifeCue/Services/Persistence/ReminderRecord.swift */; };
+		F3B940BD9AB14BF798CF0825 /* LifeCue/Domain/Backup/LifeCueBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBE3F3F25148B0B64BB1A8 /* LifeCue/Domain/Backup/LifeCueBackup.swift */; };
+		F54D73FABBD344B190BBF738 /* LifeCue/Services/Persistence/ReminderFetchOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB7033FEA4E299AE73DE3 /* LifeCue/Services/Persistence/ReminderFetchOutcome.swift */; };
+		F5AF893E1AA54F78A1BB90D2 /* LifeCue/Features/Settings/PrivacyContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D05025EB21F4F259EE032DC /* LifeCue/Features/Settings/PrivacyContent.swift */; };
+		F70DB5D928554604B5A7DCFF /* LifeCueTests/ReminderServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601FD0265DAD4A6FA849DF18 /* LifeCueTests/ReminderServiceTests.swift */; };
+		F7463CCD38F2499C9F2A9C0A /* LifeCue/Features/Home/ReminderHomeFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E1DD0101C4D88A0936137 /* LifeCue/Features/Home/ReminderHomeFiltering.swift */; };
+		F907711E62974994817628E2 /* LifeCue/Features/Capture/AddSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461E1AA17313465EA8BA7393 /* LifeCue/Features/Capture/AddSomethingView.swift */; };
+		F9350C67FFFA41E88EC9A4BF /* LifeCue/Services/OCR/VisionOCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422AD91EC62C45CBA8563AC9 /* LifeCue/Services/OCR/VisionOCRService.swift */; };
+		F9658E3AFD774C5E9360F004 /* LifeCue/Features/Capture/CameraPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3413BE6DA0949439A96189E /* LifeCue/Features/Capture/CameraPickerView.swift */; };
+		FA401B804A1247FBA25B66BA /* LifeCue/Features/Calendar/MonthCalendarGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1395201F47E097ABBF67 /* LifeCue/Features/Calendar/MonthCalendarGrid.swift */; };
+		FB81D943C5B944AEAC081117 /* LifeCue/Services/Extraction/ExtractionTimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC162E6DEF6C4E70A983A61B /* LifeCue/Services/Extraction/ExtractionTimeParser.swift */; };
+		FD4E28DA4EE8474AB7F3E34F /* LifeCue/Features/Calendar/CalendarEventPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AD965A2A944D19A4584AF6 /* LifeCue/Features/Calendar/CalendarEventPickerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DF91FADBAE54B00B8B88233 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 065154309ACC48539D3718B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A24BD68E8B054DC8AAB2AF48;
+			remoteInfo = LifeCue;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00293F46747B4D0F837BE86A /* LifeCue/Services/Calendar/CalendarServing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Calendar/CalendarServing.swift; sourceTree = SOURCE_ROOT; };
+		0036373327C54F11AB940797 /* LifeCue/Domain/Backup/LifeCueBackupMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Backup/LifeCueBackupMapper.swift; sourceTree = SOURCE_ROOT; };
+		0068969B69C84279BDE817F8 /* LifeCue/Features/Settings/PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Settings/PrivacyView.swift; sourceTree = SOURCE_ROOT; };
+		008A95F705FE42D687C40BA1 /* LifeCueTests/LifeCueNotificationCenterDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/LifeCueNotificationCenterDelegateTests.swift; sourceTree = SOURCE_ROOT; };
+		02999CE62E6049F6AFED20BF /* LifeCueTests/ReminderScheduleRaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderScheduleRaceTests.swift; sourceTree = SOURCE_ROOT; };
+		04644E0864B64B61BDBC9323 /* LifeCue/Domain/Models/ReminderRuleDisplayFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/ReminderRuleDisplayFormatter.swift; sourceTree = SOURCE_ROOT; };
+		0662474397C44750BA92D8DE /* LifeCue/Domain/Models/ReminderContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/ReminderContext.swift; sourceTree = SOURCE_ROOT; };
+		070C1395201F47E097ABBF67 /* LifeCue/Features/Calendar/MonthCalendarGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Calendar/MonthCalendarGrid.swift; sourceTree = SOURCE_ROOT; };
+		0A38169574674C889CF23970 /* LifeCue/Services/Forward/ForwardSharingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Forward/ForwardSharingService.swift; sourceTree = SOURCE_ROOT; };
+		0AB3ED606AB74475B786DEB9 /* LifeCueTests/ReminderRuleCodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderRuleCodingTests.swift; sourceTree = SOURCE_ROOT; };
+		0E0637947F5E4139B60C1B86 /* LifeCue/Features/Reminder/EditReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Reminder/EditReminderView.swift; sourceTree = SOURCE_ROOT; };
+		0ED1A2DE6521430A954C1104 /* LifeCueTests/ProjectSourceSyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ProjectSourceSyncTests.swift; sourceTree = SOURCE_ROOT; };
+		0EF994FC4E264735A588BCC0 /* LifeCueTests/ReminderSprint7PeopleContextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint7PeopleContextTests.swift; sourceTree = SOURCE_ROOT; };
+		10B7A8CF4BB84109AD1B1202 /* LifeCue/Services/Notifications/NotificationTapRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Notifications/NotificationTapRouting.swift; sourceTree = SOURCE_ROOT; };
+		138AE16A12A946E69924B5EB /* LifeCue/Domain/OCR/OCRResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/OCR/OCRResult.swift; sourceTree = SOURCE_ROOT; };
+		161F17512B71477F80E1129F /* LifeCue/Domain/Backup/BackupReminderInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Backup/BackupReminderInterval.swift; sourceTree = SOURCE_ROOT; };
+		18A2E86E30874B63A5450CA7 /* LifeCueTests/ReminderSprint16SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint16SettingsTests.swift; sourceTree = SOURCE_ROOT; };
+		1A7D38D05A9245FEBEBA9430 /* LifeCue/Services/Backup/BackupStoreReplacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Backup/BackupStoreReplacing.swift; sourceTree = SOURCE_ROOT; };
+		1B57B333D4CB46518571B5C7 /* LifeCueTests/ReminderRecurrenceEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderRecurrenceEngineTests.swift; sourceTree = SOURCE_ROOT; };
+		1B89B7DE95EE47E88A6D165A /* LifeCueTests/ReminderSprint17ReliabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint17ReliabilityTests.swift; sourceTree = SOURCE_ROOT; };
+		1D0E732CC7234B6591EBA8BE /* LifeCue/Services/Persistence/PersonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/PersonRepository.swift; sourceTree = SOURCE_ROOT; };
+		249B00A4F6AC4D98B67DE720 /* LifeCue/Services/Settings/LifeCueSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Settings/LifeCueSettings.swift; sourceTree = SOURCE_ROOT; };
+		269940F1721B4F0EA7EB9F68 /* LifeCue/Services/Persistence/InMemoryReminderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/InMemoryReminderRepository.swift; sourceTree = SOURCE_ROOT; };
+		292E43FBEBC24EBF81689B79 /* LifeCue/Domain/Models/ContextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/ContextService.swift; sourceTree = SOURCE_ROOT; };
+		29F355013F0F4DEBA21649B2 /* LifeCueTests/ReminderSprint14BackupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint14BackupTests.swift; sourceTree = SOURCE_ROOT; };
+		2ADBE3F3F25148B0B64BB1A8 /* LifeCue/Domain/Backup/LifeCueBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Backup/LifeCueBackup.swift; sourceTree = SOURCE_ROOT; };
+		2D4675567F95435CAAE9CB15 /* LifeCue/Services/Persistence/ReminderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/ReminderRepository.swift; sourceTree = SOURCE_ROOT; };
+		2E748FE1950B4A7B9C5CDE7E /* LifeCue/Domain/Models/Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/Person.swift; sourceTree = SOURCE_ROOT; };
+		2FC779EB3F2A4DBB8AC74A7D /* LifeCue/Services/Calendar/EventKitCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Calendar/EventKitCalendarService.swift; sourceTree = SOURCE_ROOT; };
+		30B4DFC610D04C4480B7DC23 /* LifeCue/Features/Calendar/CalendarMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Calendar/CalendarMonthView.swift; sourceTree = SOURCE_ROOT; };
+		327325CB4CFB42A7B0153699 /* LifeCue/Features/Calendar/CalendarMonthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Calendar/CalendarMonthViewModel.swift; sourceTree = SOURCE_ROOT; };
+		330B3928AFE7447298E1D66A /* LifeCueTests/ReminderSprint61ReliabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint61ReliabilityTests.swift; sourceTree = SOURCE_ROOT; };
+		349DD58B066B4772807730AE /* LifeCue/Domain/Models/OrganizationListScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/OrganizationListScope.swift; sourceTree = SOURCE_ROOT; };
+		36911FE584C543BCA2F3EFFB /* LifeCue/Services/Extraction/ReminderTextExtracting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Extraction/ReminderTextExtracting.swift; sourceTree = SOURCE_ROOT; };
+		3822F359A275427DA8FFD61B /* LifeCueTests/ReminderSprint8ForwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint8ForwardTests.swift; sourceTree = SOURCE_ROOT; };
+		39C22B81B7634B73A4633E6C /* LifeCue/Domain/ReminderEngine/ReminderRuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/ReminderEngine/ReminderRuleEngine.swift; sourceTree = SOURCE_ROOT; };
+		39ED22F274664BA8A46BCCEF /* LifeCueTests/ReminderSprint19UnarchiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint19UnarchiveTests.swift; sourceTree = SOURCE_ROOT; };
+		3B9C4FAD7C8247D58CE2C2C5 /* LifeCueTests/ReminderNotificationLifecycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderNotificationLifecycleTests.swift; sourceTree = SOURCE_ROOT; };
+		3D4773DE608644BF92A07E11 /* LifeCueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeCueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5F8F574B8646B0AD549DCB /* LifeCue/Features/Backup/BackupRestorePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Backup/BackupRestorePresentation.swift; sourceTree = SOURCE_ROOT; };
+		403437D7A54142B9BF9C3CFE /* LifeCue/Features/Capture/TransferableImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Capture/TransferableImageData.swift; sourceTree = SOURCE_ROOT; };
+		422AD91EC62C45CBA8563AC9 /* LifeCue/Services/OCR/VisionOCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/OCR/VisionOCRService.swift; sourceTree = SOURCE_ROOT; };
+		461E1AA17313465EA8BA7393 /* LifeCue/Features/Capture/AddSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Capture/AddSomethingView.swift; sourceTree = SOURCE_ROOT; };
+		47DC30AFDE2D45B6944AC8DD /* LifeCue/Services/Calendar/FakeCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Calendar/FakeCalendarService.swift; sourceTree = SOURCE_ROOT; };
+		510F6B6A8E994125B8A45D74 /* LifeCue/Features/People/PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/People/PeopleListView.swift; sourceTree = SOURCE_ROOT; };
+		518EE597F1BC43668CABB108 /* LifeCue/Features/Calendar/CalendarEventDisplayFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Calendar/CalendarEventDisplayFormatter.swift; sourceTree = SOURCE_ROOT; };
+		52785F6C9FAE42128A7E60D0 /* LifeCue/Domain/Models/ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/ReminderService.swift; sourceTree = SOURCE_ROOT; };
+		53A730FC6A8341748CDB4EAD /* LifeCue/Features/Home/ReminderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Home/ReminderListViewModel.swift; sourceTree = SOURCE_ROOT; };
+		55414F3A30074D2B817B296B /* LifeCue/Features/Reminder/ForwardReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Reminder/ForwardReminderView.swift; sourceTree = SOURCE_ROOT; };
+		554C1C2672854BB6879EC388 /* LifeCue/Services/OCR/FakeOCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/OCR/FakeOCRService.swift; sourceTree = SOURCE_ROOT; };
+		559D1BB2760745BDAAECADD7 /* LifeCueTests/ReminderWeekdaySelectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderWeekdaySelectorUITests.swift; sourceTree = SOURCE_ROOT; };
+		55F24660D8CA4082AF14B9A7 /* LifeCueTests/ReminderDateWindowDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderDateWindowDefaultTests.swift; sourceTree = SOURCE_ROOT; };
+		576387641AD94913869B2E37 /* LifeCueTests/ReminderHomeFilteringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderHomeFilteringTests.swift; sourceTree = SOURCE_ROOT; };
+		5CE2E88AD8E949EFA41C2AE6 /* LifeCue/Services/Backup/BackupExportImportServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Backup/BackupExportImportServices.swift; sourceTree = SOURCE_ROOT; };
+		5E431F3172EE4ABD85CA4B56 /* LifeCue/Services/Persistence/ReminderRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/ReminderRecord.swift; sourceTree = SOURCE_ROOT; };
+		5E7FD4CBBED44D9086F9DFE5 /* LifeCue/Services/Backup/LifeCueBackupFileDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Backup/LifeCueBackupFileDocument.swift; sourceTree = SOURCE_ROOT; };
+		5FFD24233E4142E8B40B2CB0 /* LifeCueTests/OCRServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/OCRServiceTests.swift; sourceTree = SOURCE_ROOT; };
+		601FD0265DAD4A6FA849DF18 /* LifeCueTests/ReminderServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderServiceTests.swift; sourceTree = SOURCE_ROOT; };
+		64DC131C3E9F492F9C1D3AE7 /* LifeCue/Services/Backup/BackupReminderScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Backup/BackupReminderScheduler.swift; sourceTree = SOURCE_ROOT; };
+		66D241D72842481F960F6FBB /* LifeCue/Domain/Models/ReminderRecurrence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/ReminderRecurrence.swift; sourceTree = SOURCE_ROOT; };
+		6CA58E3AA9A34FB392FE926D /* LifeCue/Features/Root/PersistenceFailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Root/PersistenceFailureView.swift; sourceTree = SOURCE_ROOT; };
+		6EF44BA505C443448FB65DEC /* LifeCue/Features/Backup/BackupRestoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Backup/BackupRestoreView.swift; sourceTree = SOURCE_ROOT; };
+		7086218C15AE4193A198CA3A /* LifeCueTests/ReminderModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderModelTests.swift; sourceTree = SOURCE_ROOT; };
+		709B272D64F74D6F9E129013 /* LifeCue/Domain/Classification/ReminderHomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Classification/ReminderHomeSection.swift; sourceTree = SOURCE_ROOT; };
+		7191314DA2A84B45BEEA3EC6 /* LifeCue/Features/Reminder/ReminderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Reminder/ReminderDetailView.swift; sourceTree = SOURCE_ROOT; };
+		72319279BE044FEF90918B8A /* LifeCueTests/ReminderSprint13OCRExtractionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint13OCRExtractionTests.swift; sourceTree = SOURCE_ROOT; };
+		72BFF6A3CDF44C2787CF5D91 /* LifeCue/Domain/Models/ReminderForwardFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/ReminderForwardFormatter.swift; sourceTree = SOURCE_ROOT; };
+		742266C476DC495BA40999EB /* LifeCue/Features/Reminder/ReminderScheduleFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Reminder/ReminderScheduleFormModel.swift; sourceTree = SOURCE_ROOT; };
+		743E08A79D77492FAE3D690C /* LifeCue/Services/Notifications/NotificationContentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Notifications/NotificationContentBuilder.swift; sourceTree = SOURCE_ROOT; };
+		74B1810B0A464DCBBD52A9B3 /* LifeCue/Features/Capture/ImageCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Capture/ImageCaptureViewModel.swift; sourceTree = SOURCE_ROOT; };
+		7732ADAA622D47E2970A0979 /* LifeCueTests/ReminderSprint15HelpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint15HelpTests.swift; sourceTree = SOURCE_ROOT; };
+		77A41857F0DD496EA3215943 /* LifeCue/Domain/Extraction/ReminderDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Extraction/ReminderDraft.swift; sourceTree = SOURCE_ROOT; };
+		78D0F3B24C49483282ED30E9 /* LifeCue/Features/Calendar/CalendarUpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Calendar/CalendarUpcomingView.swift; sourceTree = SOURCE_ROOT; };
+		7A506504268C421EB28A1A0F /* LifeCueTests/ReminderHomeClassifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderHomeClassifierTests.swift; sourceTree = SOURCE_ROOT; };
+		7BF7062E54E74F93811FAF01 /* LifeCue/Services/Persistence/LifeCueAppBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/LifeCueAppBootstrap.swift; sourceTree = SOURCE_ROOT; };
+		80D38F520D2F428C8E77A502 /* LifeCue/Services/Notifications/BackupReminderNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Notifications/BackupReminderNotification.swift; sourceTree = SOURCE_ROOT; };
+		8256A84A91CC4C97A5A80AC3 /* LifeCue/Features/Capture/ExtractionReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Capture/ExtractionReviewViewModel.swift; sourceTree = SOURCE_ROOT; };
+		848DB7033FEA4E299AE73DE3 /* LifeCue/Services/Persistence/ReminderFetchOutcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/ReminderFetchOutcome.swift; sourceTree = SOURCE_ROOT; };
+		84A347E6CB7C464591A83100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84AEF53B5A0849F48E1BF520 /* LifeCue/Features/Home/HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Home/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		84EB4222956E458292205593 /* LifeCue/Domain/Models/ReminderDisplayFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/ReminderDisplayFormatter.swift; sourceTree = SOURCE_ROOT; };
+		868467517C7742FA8F7467D3 /* LifeCue/Features/Capture/OCRResultViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Capture/OCRResultViews.swift; sourceTree = SOURCE_ROOT; };
+		87762132A0E545DABA13AD68 /* LifeCueTests/CalendarMonthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/CalendarMonthTests.swift; sourceTree = SOURCE_ROOT; };
+		87E6781BFDFB4EF4AB5E69CB /* LifeCue/Services/Extraction/ExtractionDateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Extraction/ExtractionDateParser.swift; sourceTree = SOURCE_ROOT; };
+		88603CDBF3B44A5C8053F3EF /* LifeCue/Domain/Extraction/ReminderDraftConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Extraction/ReminderDraftConverter.swift; sourceTree = SOURCE_ROOT; };
+		89AD965A2A944D19A4584AF6 /* LifeCue/Features/Calendar/CalendarEventPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Calendar/CalendarEventPickerView.swift; sourceTree = SOURCE_ROOT; };
+		8D05025EB21F4F259EE032DC /* LifeCue/Features/Settings/PrivacyContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Settings/PrivacyContent.swift; sourceTree = SOURCE_ROOT; };
+		8F16D10CA72A41A5BD2CE417 /* LifeCue/Services/Notifications/NotificationNavigationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Notifications/NotificationNavigationStore.swift; sourceTree = SOURCE_ROOT; };
+		8FB2C29041734B1A92675AED /* LifeCue/App/LifeCueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/App/LifeCueApp.swift; sourceTree = SOURCE_ROOT; };
+		90C720C991A546EB94378E0E /* LifeCue/Services/Persistence/ContextRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/ContextRecord.swift; sourceTree = SOURCE_ROOT; };
+		913B909069A84DBAA0047918 /* LifeCue/Services/Persistence/ContextRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/ContextRepository.swift; sourceTree = SOURCE_ROOT; };
+		93DB96A330E64100B1E87B00 /* LifeCue/Domain/Calendar/CalendarEventPrefill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Calendar/CalendarEventPrefill.swift; sourceTree = SOURCE_ROOT; };
+		960F3130042B488494F3D503 /* LifeCue/Services/Extraction/DeterministicReminderTextExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Extraction/DeterministicReminderTextExtractor.swift; sourceTree = SOURCE_ROOT; };
+		9C65D462F9454FE880F2A3EA /* LifeCue/Features/Help/HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Help/HelpView.swift; sourceTree = SOURCE_ROOT; };
+		AE492C8A855A4BFA8AC51B7B /* LifeCue/Services/Persistence/SwiftDataReminderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/SwiftDataReminderRepository.swift; sourceTree = SOURCE_ROOT; };
+		AE94424CF7834999AB6ADA0B /* LifeCueTests/ReminderTimezoneDisplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderTimezoneDisplayTests.swift; sourceTree = SOURCE_ROOT; };
+		B0242416E11949FC82381363 /* LifeCue/Features/Capture/ExtractionReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Capture/ExtractionReviewView.swift; sourceTree = SOURCE_ROOT; };
+		B0EF76DD255E41389CA02CED /* LifeCue/Features/Reminder/AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Reminder/AddReminderView.swift; sourceTree = SOURCE_ROOT; };
+		B20ED5EC8CB94961AFD39517 /* LifeCueTests/SwiftDataReminderRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/SwiftDataReminderRepositoryTests.swift; sourceTree = SOURCE_ROOT; };
+		B2A5E3C3A109417F82BCFBF9 /* LifeCue/Services/Notifications/DelayedNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Notifications/DelayedNotificationScheduler.swift; sourceTree = SOURCE_ROOT; };
+		B33D5062B7B045B982E4D2B0 /* LifeCue/Features/More/MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/More/MoreView.swift; sourceTree = SOURCE_ROOT; };
+		B4B03876A69841C5BAB76F7C /* LifeCueTests/ReminderSprint15BackupReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint15BackupReminderTests.swift; sourceTree = SOURCE_ROOT; };
+		B5BF722C937A40E9A84D1E50 /* LifeCue/Domain/Models/Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/Reminder.swift; sourceTree = SOURCE_ROOT; };
+		B5DAEFD909D0487F94952732 /* LifeCueTests/ReminderSprint62CapacityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint62CapacityTests.swift; sourceTree = SOURCE_ROOT; };
+		B6584324F3B5447EB1CDF10E /* LifeCue/Domain/Models/NotificationReconcileResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/NotificationReconcileResult.swift; sourceTree = SOURCE_ROOT; };
+		BC162E6DEF6C4E70A983A61B /* LifeCue/Services/Extraction/ExtractionTimeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Extraction/ExtractionTimeParser.swift; sourceTree = SOURCE_ROOT; };
+		C15E1DD0101C4D88A0936137 /* LifeCue/Features/Home/ReminderHomeFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Home/ReminderHomeFiltering.swift; sourceTree = SOURCE_ROOT; };
+		C2B1E1A2329F4652A5DF2A5C /* LifeCue/Services/Persistence/ReminderRuleCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/ReminderRuleCoding.swift; sourceTree = SOURCE_ROOT; };
+		C344B09F56424E669858E00A /* LifeCueTests/CalendarServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/CalendarServiceTests.swift; sourceTree = SOURCE_ROOT; };
+		C6285D0F364144FC81C243FF /* LifeCue/Features/Calendar/CalendarUpcomingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Calendar/CalendarUpcomingViewModel.swift; sourceTree = SOURCE_ROOT; };
+		C846F3D2907145FF8841919E /* LifeCue/Domain/Backup/BackupValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Backup/BackupValidation.swift; sourceTree = SOURCE_ROOT; };
+		CBB498CE9EF94719B19F0173 /* LifeCue/Features/Settings/AboutLifeCueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Settings/AboutLifeCueView.swift; sourceTree = SOURCE_ROOT; };
+		CC3B38424B4D4D7DAD045245 /* LifeCue/Domain/Extraction/ExtractionFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Extraction/ExtractionFieldState.swift; sourceTree = SOURCE_ROOT; };
+		CD99BF6744A4471AA390C42B /* LifeCue/Domain/Models/PersonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/PersonService.swift; sourceTree = SOURCE_ROOT; };
+		CED77929BDFE4005ADFD85BA /* LifeCue/Features/Reminder/ReminderOrganizationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Reminder/ReminderOrganizationSection.swift; sourceTree = SOURCE_ROOT; };
+		D38D071D8F8A48A9A5C53194 /* LifeCueTests/ReminderSprint18DeletionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint18DeletionTests.swift; sourceTree = SOURCE_ROOT; };
+		D42F8B6556A4474792D46E16 /* LifeCue/Domain/Models/ReminderMetadataResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/ReminderMetadataResolver.swift; sourceTree = SOURCE_ROOT; };
+		D571C96C646844D68DA4DFF0 /* LifeCue/Domain/Models/ReminderRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/ReminderRule.swift; sourceTree = SOURCE_ROOT; };
+		D8E6B8222C90413DB2F79AE1 /* LifeCueTests/PeopleContextCreationPresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/PeopleContextCreationPresentationTests.swift; sourceTree = SOURCE_ROOT; };
+		D8F9B67F18304DC88C44B6F1 /* LifeCue/Features/Help/HelpContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Help/HelpContent.swift; sourceTree = SOURCE_ROOT; };
+		DB2CD7DD26E3422C83D08E83 /* LifeCue/Services/Notifications/FakeNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Notifications/FakeNotificationScheduler.swift; sourceTree = SOURCE_ROOT; };
+		DF0B2B8537E54D169DDB7A3E /* LifeCue/Features/Calendar/CalendarMonthIndexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Calendar/CalendarMonthIndexer.swift; sourceTree = SOURCE_ROOT; };
+		DF79EBB1A29447809A219E7C /* LifeCue/Features/People/ContextsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/People/ContextsListView.swift; sourceTree = SOURCE_ROOT; };
+		E00A33E0DFA5428C98427ADC /* LifeCue/Features/Placeholders/PlaceholderTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Placeholders/PlaceholderTabView.swift; sourceTree = SOURCE_ROOT; };
+		E1815D3A596A4D50A09C8AE0 /* LifeCue/Domain/Models/ReminderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/ReminderStatus.swift; sourceTree = SOURCE_ROOT; };
+		E1AB01C099554552B6F57500 /* LifeCue/Features/Capture/ImageCaptureFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Capture/ImageCaptureFlowView.swift; sourceTree = SOURCE_ROOT; };
+		E4E243607CEB4F7AB7EFC8C2 /* LifeCue/Features/Settings/SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Settings/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		E9E48734F3464199B695E260 /* LifeCue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeCue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACFCC96579A43C393777F0E /* LifeCueTests/ReminderTextExtractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderTextExtractorTests.swift; sourceTree = SOURCE_ROOT; };
+		EB177799BA77410CADBC8BF9 /* LifeCue/Domain/Calendar/CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Calendar/CalendarEvent.swift; sourceTree = SOURCE_ROOT; };
+		EC6AFC58D1A646F494B6146F /* LifeCueTests/ReminderRuleEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderRuleEngineTests.swift; sourceTree = SOURCE_ROOT; };
+		ED6C009B9C4740FCA9ADE3DA /* LifeCue/Domain/Models/OrganizationDeletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/Models/OrganizationDeletion.swift; sourceTree = SOURCE_ROOT; };
+		EFD4B9D522314DBBA35E469B /* LifeCue/Features/More/MoreNavigationPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/More/MoreNavigationPresentation.swift; sourceTree = SOURCE_ROOT; };
+		F04C6B9E28F2410FBF4580CB /* LifeCue/Domain/ReminderEngine/ReminderSchedulingPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Domain/ReminderEngine/ReminderSchedulingPolicy.swift; sourceTree = SOURCE_ROOT; };
+		F3413BE6DA0949439A96189E /* LifeCue/Features/Capture/CameraPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Capture/CameraPickerView.swift; sourceTree = SOURCE_ROOT; };
+		F3A756C6FBEB497BBE871215 /* LifeCue/Features/Root/RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Features/Root/RootView.swift; sourceTree = SOURCE_ROOT; };
+		F4C4FCF9CFF0446FAF01B92E /* LifeCue/Services/Notifications/NotificationScheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Notifications/NotificationScheduling.swift; sourceTree = SOURCE_ROOT; };
+		F56E890577974340ABC32B94 /* LifeCue/Services/Notifications/UserNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Notifications/UserNotificationScheduler.swift; sourceTree = SOURCE_ROOT; };
+		F88F89A896B44364943798DA /* LifeCue/Services/Persistence/PersonRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Persistence/PersonRecord.swift; sourceTree = SOURCE_ROOT; };
+		FA365D60508746BA87486154 /* LifeCue/Services/OCR/OCRServing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/OCR/OCRServing.swift; sourceTree = SOURCE_ROOT; };
+		FA41FBABAE7C4AF4820633EE /* LifeCueTests/ReminderSprint20ReliabilityQATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ReminderSprint20ReliabilityQATests.swift; sourceTree = SOURCE_ROOT; };
+		FA5CC07DC74E4D45935E913C /* LifeCue/Services/Notifications/LifeCueNotificationCenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Notifications/LifeCueNotificationCenterDelegate.swift; sourceTree = SOURCE_ROOT; };
+		FB6914DD7A8E48CEA4137F5A /* LifeCue/DesignSystem/LifeCueTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/DesignSystem/LifeCueTheme.swift; sourceTree = SOURCE_ROOT; };
+		FBE3698E863D45F789599C39 /* LifeCueTests/ExtractionReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCueTests/ExtractionReviewTests.swift; sourceTree = SOURCE_ROOT; };
+		FD68FF8955DE4718B6595D23 /* LifeCue/Services/Extraction/FakeReminderTextExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCue/Services/Extraction/FakeReminderTextExtractor.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0ACFA908AE742A59B3A8C77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD6AE156B3854AF09EFC1A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BC41F5AF0CE484B816DEB82 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				249B00A4F6AC4D98B67DE720 /* LifeCue/Services/Settings/LifeCueSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		110EE30A4BCB4FFBA192D2B3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84AEF53B5A0849F48E1BF520 /* LifeCue/Features/Home/HomeView.swift */,
+				C15E1DD0101C4D88A0936137 /* LifeCue/Features/Home/ReminderHomeFiltering.swift */,
+				53A730FC6A8341748CDB4EAD /* LifeCue/Features/Home/ReminderListViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1A4F3635032C4B499A71F399 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				FB6914DD7A8E48CEA4137F5A /* LifeCue/DesignSystem/LifeCueTheme.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		1C3386A475FC45028956C20A /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				461E1AA17313465EA8BA7393 /* LifeCue/Features/Capture/AddSomethingView.swift */,
+				F3413BE6DA0949439A96189E /* LifeCue/Features/Capture/CameraPickerView.swift */,
+				B0242416E11949FC82381363 /* LifeCue/Features/Capture/ExtractionReviewView.swift */,
+				8256A84A91CC4C97A5A80AC3 /* LifeCue/Features/Capture/ExtractionReviewViewModel.swift */,
+				E1AB01C099554552B6F57500 /* LifeCue/Features/Capture/ImageCaptureFlowView.swift */,
+				74B1810B0A464DCBBD52A9B3 /* LifeCue/Features/Capture/ImageCaptureViewModel.swift */,
+				868467517C7742FA8F7467D3 /* LifeCue/Features/Capture/OCRResultViews.swift */,
+				403437D7A54142B9BF9C3CFE /* LifeCue/Features/Capture/TransferableImageData.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		1DFA6C88B3EB42C786B5466D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				00293F46747B4D0F837BE86A /* LifeCue/Services/Calendar/CalendarServing.swift */,
+				2FC779EB3F2A4DBB8AC74A7D /* LifeCue/Services/Calendar/EventKitCalendarService.swift */,
+				47DC30AFDE2D45B6944AC8DD /* LifeCue/Services/Calendar/FakeCalendarService.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		1E9EEBB011EF4A2DBF917C13 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				803D8CA51A3C49D6A74AEB90 /* Persistence */,
+				BACF2984F5654045BA957A46 /* Notifications */,
+				1DFA6C88B3EB42C786B5466D /* Calendar */,
+				F9AD0ADEB61C48F987AA46AB /* OCR */,
+				7AFB1D2A8D3643D98168A3F3 /* Extraction */,
+				5D3D5AF784AD43E2A06147AF /* Forward */,
+				4B81B40018EA4AA2B42B42F1 /* Backup */,
+				0BC41F5AF0CE484B816DEB82 /* Settings */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2F2526EB8B8C476581431CC0 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				B0EF76DD255E41389CA02CED /* LifeCue/Features/Reminder/AddReminderView.swift */,
+				0E0637947F5E4139B60C1B86 /* LifeCue/Features/Reminder/EditReminderView.swift */,
+				55414F3A30074D2B817B296B /* LifeCue/Features/Reminder/ForwardReminderView.swift */,
+				7191314DA2A84B45BEEA3EC6 /* LifeCue/Features/Reminder/ReminderDetailView.swift */,
+				CED77929BDFE4005ADFD85BA /* LifeCue/Features/Reminder/ReminderOrganizationSection.swift */,
+				742266C476DC495BA40999EB /* LifeCue/Features/Reminder/ReminderScheduleFormModel.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		3164DF1D87644901BC6E897F /* Placeholders */ = {
+			isa = PBXGroup;
+			children = (
+				E00A33E0DFA5428C98427ADC /* LifeCue/Features/Placeholders/PlaceholderTabView.swift */,
+			);
+			path = Placeholders;
+			sourceTree = "<group>";
+		};
+		37C6C473BEAE4D07A59CCD55 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				DF79EBB1A29447809A219E7C /* LifeCue/Features/People/ContextsListView.swift */,
+				510F6B6A8E994125B8A45D74 /* LifeCue/Features/People/PeopleListView.swift */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		4B5F48AE62A9427A9337AD62 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BA9058F83F384F54AEC43D5B /* Models */,
+				7C0EFA58F0B84E0EA5F778A0 /* Classification */,
+				CB22269FB53A40F9BF57A343 /* Calendar */,
+				9FF07AEE09FA4F2A96072EAA /* ReminderEngine */,
+				7551CB2785124653B3967E1F /* OCR */,
+				4EBCBF8F45B843F1830BA9E9 /* Extraction */,
+				E6282B32124B4430A879108B /* Backup */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4B81B40018EA4AA2B42B42F1 /* Backup */ = {
+			isa = PBXGroup;
+			children = (
+				5CE2E88AD8E949EFA41C2AE6 /* LifeCue/Services/Backup/BackupExportImportServices.swift */,
+				64DC131C3E9F492F9C1D3AE7 /* LifeCue/Services/Backup/BackupReminderScheduler.swift */,
+				1A7D38D05A9245FEBEBA9430 /* LifeCue/Services/Backup/BackupStoreReplacing.swift */,
+				5E7FD4CBBED44D9086F9DFE5 /* LifeCue/Services/Backup/LifeCueBackupFileDocument.swift */,
+			);
+			path = Backup;
+			sourceTree = "<group>";
+		};
+		4EBCBF8F45B843F1830BA9E9 /* Extraction */ = {
+			isa = PBXGroup;
+			children = (
+				CC3B38424B4D4D7DAD045245 /* LifeCue/Domain/Extraction/ExtractionFieldState.swift */,
+				77A41857F0DD496EA3215943 /* LifeCue/Domain/Extraction/ReminderDraft.swift */,
+				88603CDBF3B44A5C8053F3EF /* LifeCue/Domain/Extraction/ReminderDraftConverter.swift */,
+			);
+			path = Extraction;
+			sourceTree = "<group>";
+		};
+		5D3D5AF784AD43E2A06147AF /* Forward */ = {
+			isa = PBXGroup;
+			children = (
+				0A38169574674C889CF23970 /* LifeCue/Services/Forward/ForwardSharingService.swift */,
+			);
+			path = Forward;
+			sourceTree = "<group>";
+		};
+		5FB7E8E5999F407694B76FE3 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				EFD4B9D522314DBBA35E469B /* LifeCue/Features/More/MoreNavigationPresentation.swift */,
+				B33D5062B7B045B982E4D2B0 /* LifeCue/Features/More/MoreView.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		6C3C0040EABB48EBB8A499FA = {
+			isa = PBXGroup;
+			children = (
+				8DB59EE8E6684667BB5759CE /* LifeCue */,
+				E270061A88AA4272AB650E51 /* LifeCueTests */,
+				6CBE44DFBB034AC3977DF56B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6CBE44DFBB034AC3977DF56B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9E48734F3464199B695E260 /* LifeCue.app */,
+				3D4773DE608644BF92A07E11 /* LifeCueTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7551CB2785124653B3967E1F /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				138AE16A12A946E69924B5EB /* LifeCue/Domain/OCR/OCRResult.swift */,
+			);
+			path = OCR;
+			sourceTree = "<group>";
+		};
+		7AFB1D2A8D3643D98168A3F3 /* Extraction */ = {
+			isa = PBXGroup;
+			children = (
+				960F3130042B488494F3D503 /* LifeCue/Services/Extraction/DeterministicReminderTextExtractor.swift */,
+				87E6781BFDFB4EF4AB5E69CB /* LifeCue/Services/Extraction/ExtractionDateParser.swift */,
+				BC162E6DEF6C4E70A983A61B /* LifeCue/Services/Extraction/ExtractionTimeParser.swift */,
+				FD68FF8955DE4718B6595D23 /* LifeCue/Services/Extraction/FakeReminderTextExtractor.swift */,
+				36911FE584C543BCA2F3EFFB /* LifeCue/Services/Extraction/ReminderTextExtracting.swift */,
+			);
+			path = Extraction;
+			sourceTree = "<group>";
+		};
+		7C0EFA58F0B84E0EA5F778A0 /* Classification */ = {
+			isa = PBXGroup;
+			children = (
+				709B272D64F74D6F9E129013 /* LifeCue/Domain/Classification/ReminderHomeSection.swift */,
+			);
+			path = Classification;
+			sourceTree = "<group>";
+		};
+		803D8CA51A3C49D6A74AEB90 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				90C720C991A546EB94378E0E /* LifeCue/Services/Persistence/ContextRecord.swift */,
+				913B909069A84DBAA0047918 /* LifeCue/Services/Persistence/ContextRepository.swift */,
+				269940F1721B4F0EA7EB9F68 /* LifeCue/Services/Persistence/InMemoryReminderRepository.swift */,
+				7BF7062E54E74F93811FAF01 /* LifeCue/Services/Persistence/LifeCueAppBootstrap.swift */,
+				F88F89A896B44364943798DA /* LifeCue/Services/Persistence/PersonRecord.swift */,
+				1D0E732CC7234B6591EBA8BE /* LifeCue/Services/Persistence/PersonRepository.swift */,
+				848DB7033FEA4E299AE73DE3 /* LifeCue/Services/Persistence/ReminderFetchOutcome.swift */,
+				5E431F3172EE4ABD85CA4B56 /* LifeCue/Services/Persistence/ReminderRecord.swift */,
+				2D4675567F95435CAAE9CB15 /* LifeCue/Services/Persistence/ReminderRepository.swift */,
+				C2B1E1A2329F4652A5DF2A5C /* LifeCue/Services/Persistence/ReminderRuleCoding.swift */,
+				AE492C8A855A4BFA8AC51B7B /* LifeCue/Services/Persistence/SwiftDataReminderRepository.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		8C3AB70A7DD64C68B79C7FB6 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				518EE597F1BC43668CABB108 /* LifeCue/Features/Calendar/CalendarEventDisplayFormatter.swift */,
+				89AD965A2A944D19A4584AF6 /* LifeCue/Features/Calendar/CalendarEventPickerView.swift */,
+				DF0B2B8537E54D169DDB7A3E /* LifeCue/Features/Calendar/CalendarMonthIndexer.swift */,
+				30B4DFC610D04C4480B7DC23 /* LifeCue/Features/Calendar/CalendarMonthView.swift */,
+				327325CB4CFB42A7B0153699 /* LifeCue/Features/Calendar/CalendarMonthViewModel.swift */,
+				78D0F3B24C49483282ED30E9 /* LifeCue/Features/Calendar/CalendarUpcomingView.swift */,
+				C6285D0F364144FC81C243FF /* LifeCue/Features/Calendar/CalendarUpcomingViewModel.swift */,
+				070C1395201F47E097ABBF67 /* LifeCue/Features/Calendar/MonthCalendarGrid.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		8DB59EE8E6684667BB5759CE /* LifeCue */ = {
+			isa = PBXGroup;
+			children = (
+				F015E5C2E71A427E90857272 /* App */,
+				1A4F3635032C4B499A71F399 /* DesignSystem */,
+				4B5F48AE62A9427A9337AD62 /* Domain */,
+				1E9EEBB011EF4A2DBF917C13 /* Services */,
+				A0CDF3A1F4184E6183E78B20 /* Features */,
+				BD2AA59B0B2949D3922C2290 /* Resources */,
+			);
+			path = LifeCue;
+			sourceTree = "<group>";
+		};
+		9FF07AEE09FA4F2A96072EAA /* ReminderEngine */ = {
+			isa = PBXGroup;
+			children = (
+				39C22B81B7634B73A4633E6C /* LifeCue/Domain/ReminderEngine/ReminderRuleEngine.swift */,
+				F04C6B9E28F2410FBF4580CB /* LifeCue/Domain/ReminderEngine/ReminderSchedulingPolicy.swift */,
+			);
+			path = ReminderEngine;
+			sourceTree = "<group>";
+		};
+		A0CDF3A1F4184E6183E78B20 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				110EE30A4BCB4FFBA192D2B3 /* Home */,
+				8C3AB70A7DD64C68B79C7FB6 /* Calendar */,
+				2F2526EB8B8C476581431CC0 /* Reminder */,
+				37C6C473BEAE4D07A59CCD55 /* People */,
+				5FB7E8E5999F407694B76FE3 /* More */,
+				1C3386A475FC45028956C20A /* Capture */,
+				3164DF1D87644901BC6E897F /* Placeholders */,
+				C2F3BDE277924755A6F88E4C /* Root */,
+				A2BB66ACEC0A4E45BC790284 /* Backup */,
+				E1F67BB6AF9843F9A97DCE17 /* Help */,
+				DA6D3F76FB5F4B35B86F1610 /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A2BB66ACEC0A4E45BC790284 /* Backup */ = {
+			isa = PBXGroup;
+			children = (
+				3F5F8F574B8646B0AD549DCB /* LifeCue/Features/Backup/BackupRestorePresentation.swift */,
+				6EF44BA505C443448FB65DEC /* LifeCue/Features/Backup/BackupRestoreView.swift */,
+			);
+			path = Backup;
+			sourceTree = "<group>";
+		};
+		BA9058F83F384F54AEC43D5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				292E43FBEBC24EBF81689B79 /* LifeCue/Domain/Models/ContextService.swift */,
+				B6584324F3B5447EB1CDF10E /* LifeCue/Domain/Models/NotificationReconcileResult.swift */,
+				ED6C009B9C4740FCA9ADE3DA /* LifeCue/Domain/Models/OrganizationDeletion.swift */,
+				349DD58B066B4772807730AE /* LifeCue/Domain/Models/OrganizationListScope.swift */,
+				2E748FE1950B4A7B9C5CDE7E /* LifeCue/Domain/Models/Person.swift */,
+				CD99BF6744A4471AA390C42B /* LifeCue/Domain/Models/PersonService.swift */,
+				B5BF722C937A40E9A84D1E50 /* LifeCue/Domain/Models/Reminder.swift */,
+				0662474397C44750BA92D8DE /* LifeCue/Domain/Models/ReminderContext.swift */,
+				84EB4222956E458292205593 /* LifeCue/Domain/Models/ReminderDisplayFormatter.swift */,
+				72BFF6A3CDF44C2787CF5D91 /* LifeCue/Domain/Models/ReminderForwardFormatter.swift */,
+				D42F8B6556A4474792D46E16 /* LifeCue/Domain/Models/ReminderMetadataResolver.swift */,
+				66D241D72842481F960F6FBB /* LifeCue/Domain/Models/ReminderRecurrence.swift */,
+				D571C96C646844D68DA4DFF0 /* LifeCue/Domain/Models/ReminderRule.swift */,
+				04644E0864B64B61BDBC9323 /* LifeCue/Domain/Models/ReminderRuleDisplayFormatter.swift */,
+				52785F6C9FAE42128A7E60D0 /* LifeCue/Domain/Models/ReminderService.swift */,
+				E1815D3A596A4D50A09C8AE0 /* LifeCue/Domain/Models/ReminderStatus.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BACF2984F5654045BA957A46 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				80D38F520D2F428C8E77A502 /* LifeCue/Services/Notifications/BackupReminderNotification.swift */,
+				B2A5E3C3A109417F82BCFBF9 /* LifeCue/Services/Notifications/DelayedNotificationScheduler.swift */,
+				DB2CD7DD26E3422C83D08E83 /* LifeCue/Services/Notifications/FakeNotificationScheduler.swift */,
+				FA5CC07DC74E4D45935E913C /* LifeCue/Services/Notifications/LifeCueNotificationCenterDelegate.swift */,
+				743E08A79D77492FAE3D690C /* LifeCue/Services/Notifications/NotificationContentBuilder.swift */,
+				8F16D10CA72A41A5BD2CE417 /* LifeCue/Services/Notifications/NotificationNavigationStore.swift */,
+				F4C4FCF9CFF0446FAF01B92E /* LifeCue/Services/Notifications/NotificationScheduling.swift */,
+				10B7A8CF4BB84109AD1B1202 /* LifeCue/Services/Notifications/NotificationTapRouting.swift */,
+				F56E890577974340ABC32B94 /* LifeCue/Services/Notifications/UserNotificationScheduler.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		BD2AA59B0B2949D3922C2290 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84A347E6CB7C464591A83100 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C2F3BDE277924755A6F88E4C /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				6CA58E3AA9A34FB392FE926D /* LifeCue/Features/Root/PersistenceFailureView.swift */,
+				F3A756C6FBEB497BBE871215 /* LifeCue/Features/Root/RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		CB22269FB53A40F9BF57A343 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				EB177799BA77410CADBC8BF9 /* LifeCue/Domain/Calendar/CalendarEvent.swift */,
+				93DB96A330E64100B1E87B00 /* LifeCue/Domain/Calendar/CalendarEventPrefill.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		DA6D3F76FB5F4B35B86F1610 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CBB498CE9EF94719B19F0173 /* LifeCue/Features/Settings/AboutLifeCueView.swift */,
+				8D05025EB21F4F259EE032DC /* LifeCue/Features/Settings/PrivacyContent.swift */,
+				0068969B69C84279BDE817F8 /* LifeCue/Features/Settings/PrivacyView.swift */,
+				E4E243607CEB4F7AB7EFC8C2 /* LifeCue/Features/Settings/SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E1F67BB6AF9843F9A97DCE17 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				D8F9B67F18304DC88C44B6F1 /* LifeCue/Features/Help/HelpContent.swift */,
+				9C65D462F9454FE880F2A3EA /* LifeCue/Features/Help/HelpView.swift */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		E270061A88AA4272AB650E51 /* LifeCueTests */ = {
+			isa = PBXGroup;
+			children = (
+				87762132A0E545DABA13AD68 /* LifeCueTests/CalendarMonthTests.swift */,
+				C344B09F56424E669858E00A /* LifeCueTests/CalendarServiceTests.swift */,
+				FBE3698E863D45F789599C39 /* LifeCueTests/ExtractionReviewTests.swift */,
+				008A95F705FE42D687C40BA1 /* LifeCueTests/LifeCueNotificationCenterDelegateTests.swift */,
+				5FFD24233E4142E8B40B2CB0 /* LifeCueTests/OCRServiceTests.swift */,
+				D8E6B8222C90413DB2F79AE1 /* LifeCueTests/PeopleContextCreationPresentationTests.swift */,
+				0ED1A2DE6521430A954C1104 /* LifeCueTests/ProjectSourceSyncTests.swift */,
+				55F24660D8CA4082AF14B9A7 /* LifeCueTests/ReminderDateWindowDefaultTests.swift */,
+				7A506504268C421EB28A1A0F /* LifeCueTests/ReminderHomeClassifierTests.swift */,
+				576387641AD94913869B2E37 /* LifeCueTests/ReminderHomeFilteringTests.swift */,
+				7086218C15AE4193A198CA3A /* LifeCueTests/ReminderModelTests.swift */,
+				3B9C4FAD7C8247D58CE2C2C5 /* LifeCueTests/ReminderNotificationLifecycleTests.swift */,
+				1B57B333D4CB46518571B5C7 /* LifeCueTests/ReminderRecurrenceEngineTests.swift */,
+				0AB3ED606AB74475B786DEB9 /* LifeCueTests/ReminderRuleCodingTests.swift */,
+				EC6AFC58D1A646F494B6146F /* LifeCueTests/ReminderRuleEngineTests.swift */,
+				02999CE62E6049F6AFED20BF /* LifeCueTests/ReminderScheduleRaceTests.swift */,
+				601FD0265DAD4A6FA849DF18 /* LifeCueTests/ReminderServiceTests.swift */,
+				72319279BE044FEF90918B8A /* LifeCueTests/ReminderSprint13OCRExtractionTests.swift */,
+				29F355013F0F4DEBA21649B2 /* LifeCueTests/ReminderSprint14BackupTests.swift */,
+				B4B03876A69841C5BAB76F7C /* LifeCueTests/ReminderSprint15BackupReminderTests.swift */,
+				7732ADAA622D47E2970A0979 /* LifeCueTests/ReminderSprint15HelpTests.swift */,
+				18A2E86E30874B63A5450CA7 /* LifeCueTests/ReminderSprint16SettingsTests.swift */,
+				1B89B7DE95EE47E88A6D165A /* LifeCueTests/ReminderSprint17ReliabilityTests.swift */,
+				D38D071D8F8A48A9A5C53194 /* LifeCueTests/ReminderSprint18DeletionTests.swift */,
+				39ED22F274664BA8A46BCCEF /* LifeCueTests/ReminderSprint19UnarchiveTests.swift */,
+				FA41FBABAE7C4AF4820633EE /* LifeCueTests/ReminderSprint20ReliabilityQATests.swift */,
+				330B3928AFE7447298E1D66A /* LifeCueTests/ReminderSprint61ReliabilityTests.swift */,
+				B5DAEFD909D0487F94952732 /* LifeCueTests/ReminderSprint62CapacityTests.swift */,
+				0EF994FC4E264735A588BCC0 /* LifeCueTests/ReminderSprint7PeopleContextTests.swift */,
+				3822F359A275427DA8FFD61B /* LifeCueTests/ReminderSprint8ForwardTests.swift */,
+				EACFCC96579A43C393777F0E /* LifeCueTests/ReminderTextExtractorTests.swift */,
+				AE94424CF7834999AB6ADA0B /* LifeCueTests/ReminderTimezoneDisplayTests.swift */,
+				559D1BB2760745BDAAECADD7 /* LifeCueTests/ReminderWeekdaySelectorUITests.swift */,
+				B20ED5EC8CB94961AFD39517 /* LifeCueTests/SwiftDataReminderRepositoryTests.swift */,
+			);
+			path = LifeCueTests;
+			sourceTree = "<group>";
+		};
+		E6282B32124B4430A879108B /* Backup */ = {
+			isa = PBXGroup;
+			children = (
+				161F17512B71477F80E1129F /* LifeCue/Domain/Backup/BackupReminderInterval.swift */,
+				C846F3D2907145FF8841919E /* LifeCue/Domain/Backup/BackupValidation.swift */,
+				2ADBE3F3F25148B0B64BB1A8 /* LifeCue/Domain/Backup/LifeCueBackup.swift */,
+				0036373327C54F11AB940797 /* LifeCue/Domain/Backup/LifeCueBackupMapper.swift */,
+			);
+			path = Backup;
+			sourceTree = "<group>";
+		};
+		F015E5C2E71A427E90857272 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2C29041734B1A92675AED /* LifeCue/App/LifeCueApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F9AD0ADEB61C48F987AA46AB /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				554C1C2672854BB6879EC388 /* LifeCue/Services/OCR/FakeOCRService.swift */,
+				FA365D60508746BA87486154 /* LifeCue/Services/OCR/OCRServing.swift */,
+				422AD91EC62C45CBA8563AC9 /* LifeCue/Services/OCR/VisionOCRService.swift */,
+			);
+			path = OCR;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A24BD68E8B054DC8AAB2AF48 /* LifeCue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDDCD15873F04949B6DC15CD /* Build configuration list for PBXNativeTarget "LifeCue" */;
+			buildPhases = (
+				E520B4A4F11F405ABD9377CE /* Sources */,
+				DD6AE156B3854AF09EFC1A9A /* Frameworks */,
+				15A2B86EA6444A9E924C7607 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LifeCue;
+			productName = LifeCue;
+			productReference = E9E48734F3464199B695E260 /* LifeCue.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1DF8BBDE8D642389079D148 /* LifeCueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3EAD83AD47247718FAD7718 /* Build configuration list for PBXNativeTarget "LifeCueTests" */;
+			buildPhases = (
+				02AA5D212C3B4B08B2F59F34 /* Sources */,
+				C0ACFA908AE742A59B3A8C77 /* Frameworks */,
+				B7E41C90A2F54D6E9C1D8A03 /* Copy LifeCue Repo Snapshot */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BE852906364497186F5B20C /* PBXTargetDependency */,
+			);
+			name = LifeCueTests;
+			productName = LifeCueTests;
+			productReference = 3D4773DE608644BF92A07E11 /* LifeCueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		065154309ACC48539D3718B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					A24BD68E8B054DC8AAB2AF48 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					E1DF8BBDE8D642389079D148 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = A24BD68E8B054DC8AAB2AF48;
+					};
+				};
+			};
+			buildConfigurationList = 86260F814AAA4576BD9BAC75 /* Build configuration list for PBXProject "LifeCue" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C3C0040EABB48EBB8A499FA;
+			productRefGroup = 6CBE44DFBB034AC3977DF56B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A24BD68E8B054DC8AAB2AF48 /* LifeCue */,
+				E1DF8BBDE8D642389079D148 /* LifeCueTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15A2B86EA6444A9E924C7607 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FAC37FD58444900AD4B0F93 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B7E41C90A2F54D6E9C1D8A03 /* Copy LifeCue Repo Snapshot */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy LifeCue Repo Snapshot";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Scripts/copy_lifecue_repo_snapshot_for_tests.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02AA5D212C3B4B08B2F59F34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A270F0BF304434683023058 /* LifeCueTests/CalendarMonthTests.swift in Sources */,
+				5061D209E953451794B82495 /* LifeCueTests/CalendarServiceTests.swift in Sources */,
+				E5CEF8BA3C194191BD531C7F /* LifeCueTests/ExtractionReviewTests.swift in Sources */,
+				7E41B040BBCC45DBAC927BBD /* LifeCueTests/LifeCueNotificationCenterDelegateTests.swift in Sources */,
+				CAD1A50F10CD402D94B2019E /* LifeCueTests/OCRServiceTests.swift in Sources */,
+				9933DB57C15649639DEF389B /* LifeCueTests/PeopleContextCreationPresentationTests.swift in Sources */,
+				E230EADAE59743ECA30CF613 /* LifeCueTests/ProjectSourceSyncTests.swift in Sources */,
+				5FD667E39C154ACDA5DB3291 /* LifeCueTests/ReminderDateWindowDefaultTests.swift in Sources */,
+				B92536C86403473FBC5BB4A4 /* LifeCueTests/ReminderHomeClassifierTests.swift in Sources */,
+				AD9220A520A545CC81971C5F /* LifeCueTests/ReminderHomeFilteringTests.swift in Sources */,
+				2563BC7B32FB4BE490ED3C41 /* LifeCueTests/ReminderModelTests.swift in Sources */,
+				1EE606B50BD84099BCF4BDFA /* LifeCueTests/ReminderNotificationLifecycleTests.swift in Sources */,
+				BF23404CF46148EE8EF69C63 /* LifeCueTests/ReminderRecurrenceEngineTests.swift in Sources */,
+				B0759F4802954FF09BB59942 /* LifeCueTests/ReminderRuleCodingTests.swift in Sources */,
+				C3A8D83075E5416FA3D7232B /* LifeCueTests/ReminderRuleEngineTests.swift in Sources */,
+				123CD3BFD3C34A9CB0BBC640 /* LifeCueTests/ReminderScheduleRaceTests.swift in Sources */,
+				F70DB5D928554604B5A7DCFF /* LifeCueTests/ReminderServiceTests.swift in Sources */,
+				431A82717FB24AB2BC3401C4 /* LifeCueTests/ReminderSprint13OCRExtractionTests.swift in Sources */,
+				3067CAABD3574B90BE98AD62 /* LifeCueTests/ReminderSprint14BackupTests.swift in Sources */,
+				88D5E8264B4943EF8AA25D14 /* LifeCueTests/ReminderSprint15BackupReminderTests.swift in Sources */,
+				5FCDA240D43147E284F67B5B /* LifeCueTests/ReminderSprint15HelpTests.swift in Sources */,
+				9DECDB95E3B14992B54D405C /* LifeCueTests/ReminderSprint16SettingsTests.swift in Sources */,
+				1E73E122677F43DD85F97C8E /* LifeCueTests/ReminderSprint17ReliabilityTests.swift in Sources */,
+				9A6509E70F874F92AD5072A9 /* LifeCueTests/ReminderSprint18DeletionTests.swift in Sources */,
+				7344B26CD69F43BAAB56AB68 /* LifeCueTests/ReminderSprint19UnarchiveTests.swift in Sources */,
+				861D7FE234E44FF6A06FF7C9 /* LifeCueTests/ReminderSprint20ReliabilityQATests.swift in Sources */,
+				9A2BC587D1024742B7F0A772 /* LifeCueTests/ReminderSprint61ReliabilityTests.swift in Sources */,
+				B27355F9DF3843C8BD98669A /* LifeCueTests/ReminderSprint62CapacityTests.swift in Sources */,
+				22697BE00287456AADF30ED3 /* LifeCueTests/ReminderSprint7PeopleContextTests.swift in Sources */,
+				5B4697A78EFC4EF9821F6577 /* LifeCueTests/ReminderSprint8ForwardTests.swift in Sources */,
+				92FA9390014E466E82C489C5 /* LifeCueTests/ReminderTextExtractorTests.swift in Sources */,
+				6B2A73E7BBB44461A4273C8F /* LifeCueTests/ReminderTimezoneDisplayTests.swift in Sources */,
+				481E35BE667E45CFBF870717 /* LifeCueTests/ReminderWeekdaySelectorUITests.swift in Sources */,
+				CF191BD67D854695A2FB9A00 /* LifeCueTests/SwiftDataReminderRepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E520B4A4F11F405ABD9377CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95956631E155413CBF2256D2 /* LifeCue/App/LifeCueApp.swift in Sources */,
+				B5A5F8F8DD89415291F03544 /* LifeCue/DesignSystem/LifeCueTheme.swift in Sources */,
+				49320C9C57AC4DFA83E23193 /* LifeCue/Domain/Backup/BackupReminderInterval.swift in Sources */,
+				2EA1F373A18C45ACA19E1873 /* LifeCue/Domain/Backup/BackupValidation.swift in Sources */,
+				F3B940BD9AB14BF798CF0825 /* LifeCue/Domain/Backup/LifeCueBackup.swift in Sources */,
+				1025F3007370483C8F1C72D5 /* LifeCue/Domain/Backup/LifeCueBackupMapper.swift in Sources */,
+				0E552117558F408AA3D2ADD2 /* LifeCue/Domain/Calendar/CalendarEvent.swift in Sources */,
+				14DFD6CC62BF46EEB86817D4 /* LifeCue/Domain/Calendar/CalendarEventPrefill.swift in Sources */,
+				F2D94D9755C6464FB785505E /* LifeCue/Domain/Classification/ReminderHomeSection.swift in Sources */,
+				824C62F8532D4880A4B9EDFA /* LifeCue/Domain/Extraction/ExtractionFieldState.swift in Sources */,
+				36C94907CFFC4103A5D4A58C /* LifeCue/Domain/Extraction/ReminderDraft.swift in Sources */,
+				56669EFFBFF44B7AB090B72A /* LifeCue/Domain/Extraction/ReminderDraftConverter.swift in Sources */,
+				56DD0A87243E4ADBA8A1B8CF /* LifeCue/Domain/Models/ContextService.swift in Sources */,
+				519AA15B7C4D4DECB5F5C33D /* LifeCue/Domain/Models/NotificationReconcileResult.swift in Sources */,
+				3E82B3A6A838439AAFFD0B69 /* LifeCue/Domain/Models/OrganizationDeletion.swift in Sources */,
+				204EF484DAFB4579B9B4C358 /* LifeCue/Domain/Models/OrganizationListScope.swift in Sources */,
+				C0177D202D0242AA87C7EA56 /* LifeCue/Domain/Models/Person.swift in Sources */,
+				B86C4FDC09DE415288C23EE7 /* LifeCue/Domain/Models/PersonService.swift in Sources */,
+				B3A319848F524DA9AECDB245 /* LifeCue/Domain/Models/Reminder.swift in Sources */,
+				70162E19F1C44F87A555CE7F /* LifeCue/Domain/Models/ReminderContext.swift in Sources */,
+				0BFCE1A0B02B4C6F828935AE /* LifeCue/Domain/Models/ReminderDisplayFormatter.swift in Sources */,
+				5BEBFC7FB67946269B0F6C4A /* LifeCue/Domain/Models/ReminderForwardFormatter.swift in Sources */,
+				E32F93A513A541C7BED03510 /* LifeCue/Domain/Models/ReminderMetadataResolver.swift in Sources */,
+				3484DFC87AF44CA0B03926C1 /* LifeCue/Domain/Models/ReminderRecurrence.swift in Sources */,
+				9E4D0C4A31AA4B5E8BF26EFB /* LifeCue/Domain/Models/ReminderRule.swift in Sources */,
+				5CD3A501A666413A8C423B0F /* LifeCue/Domain/Models/ReminderRuleDisplayFormatter.swift in Sources */,
+				E116073FEF2D4049A986F0DB /* LifeCue/Domain/Models/ReminderService.swift in Sources */,
+				E1E79906BAB5420F96F47A15 /* LifeCue/Domain/Models/ReminderStatus.swift in Sources */,
+				501AD1ECBFFD45EAB6CF0944 /* LifeCue/Domain/OCR/OCRResult.swift in Sources */,
+				08875C82801E4EEFA333A906 /* LifeCue/Domain/ReminderEngine/ReminderRuleEngine.swift in Sources */,
+				AF0E162507EC4632873CE4AA /* LifeCue/Domain/ReminderEngine/ReminderSchedulingPolicy.swift in Sources */,
+				EA79FAE954DD41BEBC991954 /* LifeCue/Features/Backup/BackupRestorePresentation.swift in Sources */,
+				3407D8B82D6D4C7C9F631939 /* LifeCue/Features/Backup/BackupRestoreView.swift in Sources */,
+				DE60BF44E2344F4AAFAFAA9F /* LifeCue/Features/Calendar/CalendarEventDisplayFormatter.swift in Sources */,
+				FD4E28DA4EE8474AB7F3E34F /* LifeCue/Features/Calendar/CalendarEventPickerView.swift in Sources */,
+				79D3F090C2194918A6AD61D9 /* LifeCue/Features/Calendar/CalendarMonthIndexer.swift in Sources */,
+				B5AB55A2FF654500B39F8D05 /* LifeCue/Features/Calendar/CalendarMonthView.swift in Sources */,
+				BE380E95811448C5B66AA6BA /* LifeCue/Features/Calendar/CalendarMonthViewModel.swift in Sources */,
+				E59C188487B040D3BBC7BF8E /* LifeCue/Features/Calendar/CalendarUpcomingView.swift in Sources */,
+				953A1CD4BF744DFFB1860920 /* LifeCue/Features/Calendar/CalendarUpcomingViewModel.swift in Sources */,
+				FA401B804A1247FBA25B66BA /* LifeCue/Features/Calendar/MonthCalendarGrid.swift in Sources */,
+				F907711E62974994817628E2 /* LifeCue/Features/Capture/AddSomethingView.swift in Sources */,
+				F9658E3AFD774C5E9360F004 /* LifeCue/Features/Capture/CameraPickerView.swift in Sources */,
+				874FCFAD37A343D4972B04C2 /* LifeCue/Features/Capture/ExtractionReviewView.swift in Sources */,
+				20F6F1F5061E4CB1ABCCFD86 /* LifeCue/Features/Capture/ExtractionReviewViewModel.swift in Sources */,
+				1A060B7197C84B9CA38131BF /* LifeCue/Features/Capture/ImageCaptureFlowView.swift in Sources */,
+				2F57A26EAEE9472C98D27A66 /* LifeCue/Features/Capture/ImageCaptureViewModel.swift in Sources */,
+				12258A67D71243D287B50031 /* LifeCue/Features/Capture/OCRResultViews.swift in Sources */,
+				07586F0266F74A4B809927CF /* LifeCue/Features/Capture/TransferableImageData.swift in Sources */,
+				61BE169E18DB4721B2364E9E /* LifeCue/Features/Help/HelpContent.swift in Sources */,
+				C6F61AAC473C41AF8E2F02BF /* LifeCue/Features/Help/HelpView.swift in Sources */,
+				4130CDF34D1A4DADA47C8CD4 /* LifeCue/Features/Home/HomeView.swift in Sources */,
+				F7463CCD38F2499C9F2A9C0A /* LifeCue/Features/Home/ReminderHomeFiltering.swift in Sources */,
+				0F419C8D49884493BFF2AB44 /* LifeCue/Features/Home/ReminderListViewModel.swift in Sources */,
+				D9A8F04FE2D6499F942507F4 /* LifeCue/Features/More/MoreNavigationPresentation.swift in Sources */,
+				1C94D32A0835457381E4E42F /* LifeCue/Features/More/MoreView.swift in Sources */,
+				E01684148D4946CB9C14B9DA /* LifeCue/Features/People/ContextsListView.swift in Sources */,
+				0F25E7F3667C44F1B52FE603 /* LifeCue/Features/People/PeopleListView.swift in Sources */,
+				EFF2D4CB1E6446778D6FD2DA /* LifeCue/Features/Placeholders/PlaceholderTabView.swift in Sources */,
+				8CF52C1BE0834DB18A012857 /* LifeCue/Features/Reminder/AddReminderView.swift in Sources */,
+				A559115183464586B9A0A07F /* LifeCue/Features/Reminder/EditReminderView.swift in Sources */,
+				80E87C26394E4662B39EBE87 /* LifeCue/Features/Reminder/ForwardReminderView.swift in Sources */,
+				EC4D162D3C0F463297816D89 /* LifeCue/Features/Reminder/ReminderDetailView.swift in Sources */,
+				655D51023A41496889084F2C /* LifeCue/Features/Reminder/ReminderOrganizationSection.swift in Sources */,
+				BCC2F06EDC93405C91B894B0 /* LifeCue/Features/Reminder/ReminderScheduleFormModel.swift in Sources */,
+				D6D0B9773FA745D891C73245 /* LifeCue/Features/Root/PersistenceFailureView.swift in Sources */,
+				3AB0FAAF07E84257A8B40EF9 /* LifeCue/Features/Root/RootView.swift in Sources */,
+				323D59D1A3E345B0A9A9FBE5 /* LifeCue/Features/Settings/AboutLifeCueView.swift in Sources */,
+				F5AF893E1AA54F78A1BB90D2 /* LifeCue/Features/Settings/PrivacyContent.swift in Sources */,
+				2FA0E287063C414CB1996F44 /* LifeCue/Features/Settings/PrivacyView.swift in Sources */,
+				29D543FBA4B5419CB54B0862 /* LifeCue/Features/Settings/SettingsView.swift in Sources */,
+				5D8A556846B4479EA43603A8 /* LifeCue/Services/Backup/BackupExportImportServices.swift in Sources */,
+				709D0DB66D444360A2057BD2 /* LifeCue/Services/Backup/BackupReminderScheduler.swift in Sources */,
+				33BD29FD84264DC1A0AFB096 /* LifeCue/Services/Backup/BackupStoreReplacing.swift in Sources */,
+				CA59769E60A645879F9B674E /* LifeCue/Services/Backup/LifeCueBackupFileDocument.swift in Sources */,
+				753C4E8DF77E484384C6D33D /* LifeCue/Services/Calendar/CalendarServing.swift in Sources */,
+				E345580894A14B79A3D197C7 /* LifeCue/Services/Calendar/EventKitCalendarService.swift in Sources */,
+				7505433004F540F3BE40C38A /* LifeCue/Services/Calendar/FakeCalendarService.swift in Sources */,
+				6609247F10074C7CB0F050B8 /* LifeCue/Services/Extraction/DeterministicReminderTextExtractor.swift in Sources */,
+				9DACBDCD9F3D4114A451EF05 /* LifeCue/Services/Extraction/ExtractionDateParser.swift in Sources */,
+				FB81D943C5B944AEAC081117 /* LifeCue/Services/Extraction/ExtractionTimeParser.swift in Sources */,
+				61B33C47298A4F6F994D778A /* LifeCue/Services/Extraction/FakeReminderTextExtractor.swift in Sources */,
+				60E0D6C3E34E485CAF00E8DC /* LifeCue/Services/Extraction/ReminderTextExtracting.swift in Sources */,
+				0144F67C8A2F421AAA490AAD /* LifeCue/Services/Forward/ForwardSharingService.swift in Sources */,
+				D1B4BDFB3EF948EC9D45824C /* LifeCue/Services/Notifications/BackupReminderNotification.swift in Sources */,
+				643EBF995E4E454FA5139061 /* LifeCue/Services/Notifications/DelayedNotificationScheduler.swift in Sources */,
+				93156B4AA952422DAF2320A6 /* LifeCue/Services/Notifications/FakeNotificationScheduler.swift in Sources */,
+				77410EEFD52F455E808A9181 /* LifeCue/Services/Notifications/LifeCueNotificationCenterDelegate.swift in Sources */,
+				44678F69D5E14EC498DA45BE /* LifeCue/Services/Notifications/NotificationContentBuilder.swift in Sources */,
+				43696F05ABA84D65990A03DA /* LifeCue/Services/Notifications/NotificationNavigationStore.swift in Sources */,
+				6D1E869ADC2D4C85B1698812 /* LifeCue/Services/Notifications/NotificationScheduling.swift in Sources */,
+				4B9B455C2B164482B305E5D0 /* LifeCue/Services/Notifications/NotificationTapRouting.swift in Sources */,
+				34269BAD98CE4CC2805DC65C /* LifeCue/Services/Notifications/UserNotificationScheduler.swift in Sources */,
+				87464BEC134F4D03A70EC034 /* LifeCue/Services/OCR/FakeOCRService.swift in Sources */,
+				1B2CA2972F164E3C9FEC34F0 /* LifeCue/Services/OCR/OCRServing.swift in Sources */,
+				F9350C67FFFA41E88EC9A4BF /* LifeCue/Services/OCR/VisionOCRService.swift in Sources */,
+				C4CC5B7FDDA640CD82CC4FFD /* LifeCue/Services/Persistence/ContextRecord.swift in Sources */,
+				3EF60F4B1DEC4751849DABE5 /* LifeCue/Services/Persistence/ContextRepository.swift in Sources */,
+				2F6A091043734CC4996A6920 /* LifeCue/Services/Persistence/InMemoryReminderRepository.swift in Sources */,
+				5B5E382E5CE64F4EBC6EB920 /* LifeCue/Services/Persistence/LifeCueAppBootstrap.swift in Sources */,
+				A6826E1208A44497A0D00728 /* LifeCue/Services/Persistence/PersonRecord.swift in Sources */,
+				C068D4AA95C04272BC67D8C6 /* LifeCue/Services/Persistence/PersonRepository.swift in Sources */,
+				F54D73FABBD344B190BBF738 /* LifeCue/Services/Persistence/ReminderFetchOutcome.swift in Sources */,
+				F33936386F584ABCB17963CF /* LifeCue/Services/Persistence/ReminderRecord.swift in Sources */,
+				1D0AA00422AD433C95295AB5 /* LifeCue/Services/Persistence/ReminderRepository.swift in Sources */,
+				ED870C8027F84660AB5153EE /* LifeCue/Services/Persistence/ReminderRuleCoding.swift in Sources */,
+				4022CCEA1CE54D5795402133 /* LifeCue/Services/Persistence/SwiftDataReminderRepository.swift in Sources */,
+				8579A4D0E4494B8191484BF3 /* LifeCue/Services/Settings/LifeCueSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BE852906364497186F5B20C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A24BD68E8B054DC8AAB2AF48 /* LifeCue */;
+			targetProxy = 3DF91FADBAE54B00B8B88233 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09D953CD4920418C9CCC8A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8N3N7WP2A9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifecue.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeCue.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LifeCue";
+			};
+			name = Release;
+		};
+		967D6354BD054194B589AFD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDC1E500131A4AEE8A2806FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8N3N7WP2A9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LifeCue/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LifeCue;
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "LifeCue can optionally show your upcoming calendar events while you create reminders. Your calendar stays on this device.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "LifeCue uses the camera so you can capture a photo of a note or document to read on your device.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifecue.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E27B063075F6441EAC638988 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E38FA0E90F64497FA9F4A77B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8N3N7WP2A9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LifeCue/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LifeCue;
+				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "LifeCue can optionally show your upcoming calendar events while you create reminders. Your calendar stays on this device.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "LifeCue uses the camera so you can capture a photo of a note or document to read on your device.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifecue.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FACF76C561CB406B9CB865D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8N3N7WP2A9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifecue.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LifeCue.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LifeCue";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86260F814AAA4576BD9BAC75 /* Build configuration list for PBXProject "LifeCue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E27B063075F6441EAC638988 /* Debug */,
+				967D6354BD054194B589AFD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3EAD83AD47247718FAD7718 /* Build configuration list for PBXNativeTarget "LifeCueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACF76C561CB406B9CB865D7 /* Debug */,
+				09D953CD4920418C9CCC8A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDDCD15873F04949B6DC15CD /* Build configuration list for PBXNativeTarget "LifeCue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38FA0E90F64497FA9F4A77B /* Debug */,
+				CDC1E500131A4AEE8A2806FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 065154309ACC48539D3718B9 /* Project object */;
+}
