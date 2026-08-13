@@ -1,444 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <meta name="robots" content="index,follow">
-  <title>LifeCue — Privacy Policy &amp; Support</title>
-  <meta name="description" content="Privacy Policy and Support for LifeCue, a local-first iOS reminder app.">
-  <style>
-    :root {
-      --accent: rgb(31, 115, 122);
-      --accent-soft: rgb(31, 115, 122, 0.10);
-      --bg: rgb(245, 247, 250);
-      --card: #ffffff;
-      --text: rgb(31, 41, 56);
-      --muted: rgb(102, 115, 132);
-      --line: rgb(226, 232, 237);
-      --radius: 16px;
-      --shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-      --max: 920px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 0.18em;
-    }
-
-    a:hover { text-decoration-thickness: 2px; }
-
-    a:focus-visible,
-    .nav a:focus-visible {
-      outline: 3px solid var(--accent);
-      outline-offset: 3px;
-      border-radius: 6px;
-    }
-
-    .wrap {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 28px 20px 64px;
-    }
-
-    header.hero {
-      text-align: center;
-      padding: 28px 8px 8px;
-    }
-
-    .mark {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: -0.03em;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(32px, 5vw, 42px);
-      font-weight: 650;
-      letter-spacing: -0.03em;
-    }
-
-    .lede {
-      margin: 0 auto 20px;
-      max-width: 36em;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    nav.nav {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 24px 0 32px;
-    }
-
-    nav.nav a {
-      display: inline-block;
-      padding: 10px 18px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 15px;
-      box-shadow: var(--shadow);
-    }
-
-    nav.nav a:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .toc {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 22px 24px;
-      margin-bottom: 28px;
-    }
-
-    .toc h2 {
-      margin: 0 0 12px;
-      font-size: 15px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--muted);
-      font-weight: 650;
-    }
-
-    .toc ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 8px 20px;
-    }
-
-    .toc a {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    .toc a:hover { color: var(--accent); text-decoration: underline; }
-
-    section.card {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px 28px 24px;
-      margin-bottom: 18px;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: 24px;
-      letter-spacing: -0.02em;
-      font-weight: 650;
-    }
-
-    h3 {
-      margin: 22px 0 8px;
-      font-size: 18px;
-      font-weight: 650;
-    }
-
-    p { margin: 0 0 12px; }
-
-    ul {
-      margin: 0 0 12px;
-      padding-left: 1.2em;
-    }
-
-    li { margin: 0 0 6px; }
-
-    .glance {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin: 16px 0 4px;
-    }
-
-    .glance div {
-      background: var(--bg);
-      border-radius: 12px;
-      padding: 14px 16px;
-    }
-
-    .glance strong {
-      display: block;
-      color: var(--accent);
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-      padding: 28px 8px 8px;
-    }
-
-    @media (min-width: 700px) {
-      .glance {
-        grid-template-columns: 1fr 1fr;
-      }
-      section.card {
-        padding: 32px 36px 28px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LifeCue — Privacy Policy & Support</title>
+<meta name="description" content="LifeCue Privacy Policy and Support.">
+<style>
+:root{--bg:#f4f7f8;--surface:#fff;--text:#1f2a37;--secondary:#66758a;--muted:#8a94a3;--border:#e1e7eb;--accent:#247f87;--accent-light:#edf7f7;--accent-border:#c9e5e6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.7}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}
+.topbar-inner{max-width:980px;margin:auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--text);text-decoration:none;font-weight:700;font-size:1.05rem}
+.brand-mark{width:34px;height:34px;border-radius:10px;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700}
+nav{display:flex;gap:22px}nav a{color:var(--secondary);text-decoration:none;font-weight:600;font-size:.94rem}nav a:hover{color:var(--accent)}
+main{max-width:980px;margin:42px auto;padding:0 24px 50px}
+.hero,.card{background:var(--surface);border:1px solid var(--border);box-shadow:0 8px 30px rgba(25,45,60,.06)}
+.hero{border-radius:22px;padding:48px 52px;margin-bottom:28px}
+.card{border-radius:18px;padding:38px 42px;margin-bottom:24px}
+.eyebrow{margin:0 0 8px;color:var(--accent);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.78rem}
+h1{margin:0 0 12px;font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.08;letter-spacing:-.045em}
+.hero p{max-width:720px;margin:0;color:var(--secondary);font-size:1.08rem}
+.metadata{margin-top:25px!important;font-size:.9rem!important;color:var(--muted)!important}
+h2{margin:0 0 24px;padding-bottom:13px;border-bottom:2px solid var(--accent);font-size:1.65rem;line-height:1.3}
+h3{margin:31px 0 10px;font-size:1.12rem;line-height:1.4}
+p{margin:0 0 17px}ul,ol{margin:10px 0 22px;padding-left:25px}li{margin-bottom:7px}
+.summary{margin:24px 0 30px;padding:22px 24px;background:var(--accent-light);border:1px solid var(--accent-border);border-left:4px solid var(--accent);border-radius:11px}
+.summary h3{margin-top:0}.summary ul{margin-bottom:0}
+.contact{margin-top:28px;padding:22px 24px;background:#f8fafb;border:1px solid var(--border);border-radius:11px}
+a{color:var(--accent);font-weight:600}.contact a{text-decoration:none}.contact a:hover{text-decoration:underline}
+.support-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0 28px}
+.support-item{padding:20px;background:#f8fafb;border:1px solid var(--border);border-radius:12px}
+.support-item strong{display:block;margin-bottom:5px}.support-item span{color:var(--secondary)}
+.note{color:var(--secondary);font-size:.94rem}
+footer{max-width:980px;margin:auto;padding:0 24px 42px;color:var(--muted);font-size:.88rem;text-align:center}
+@media(max-width:700px){body{font-size:15.5px}.topbar-inner{padding:13px 18px}nav{gap:13px}nav a{font-size:.86rem}main{margin:20px auto;padding:0 14px 30px}.hero,.card{padding:29px 23px;border-radius:16px}.hero{margin-bottom:16px}h1{font-size:2.2rem}h2{font-size:1.42rem}.support-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero" id="top">
-      <div class="mark" aria-hidden="true">LC</div>
-      <h1>LifeCue</h1>
-      <p class="lede">A local-first iOS reminder app. Capture something you do not want to forget. Review it. LifeCue remembers it on your device.</p>
-      <p class="meta">Privacy Policy and Support &nbsp;·&nbsp; Effective date: 13 August 2026</p>
-    </header>
+<header class="topbar">
+<div class="topbar-inner">
+<a class="brand" href="#top"><span class="brand-mark">L</span><span>LifeCue</span></a>
+<nav><a href="#privacy">Privacy</a><a href="#support">Support</a></nav>
+</div>
+</header>
 
-    <nav class="nav" aria-label="Primary">
-      <a href="#privacy">Privacy Policy</a>
-      <a href="#support">Support</a>
-    </nav>
+<main id="top">
+<section class="hero">
+<p class="eyebrow">Smart Reminders</p>
+<h1>LifeCue</h1>
+<p>Organize reminders around the people, contexts, dates, and routines that matter to you.</p>
+<p class="metadata">Privacy Policy &amp; Support<br>Effective date: 13 August 2026<br>Bundle identifier: com.lifecue.app</p>
+</section>
 
-    <div class="toc" aria-label="On this page">
-      <h2>On this page</h2>
-      <ul>
-        <li><a href="#privacy">Privacy Policy</a></li>
-        <li><a href="#glance">Privacy at a Glance</a></li>
-        <li><a href="#stores">Information the App Stores</a></li>
-        <li><a href="#photos">Photos and Image Information</a></li>
-        <li><a href="#reminders">Reminders</a></li>
-        <li><a href="#people">People and Contexts</a></li>
-        <li><a href="#backup">Backup and Restore</a></li>
-        <li><a href="#permissions">Permissions</a></li>
-        <li><a href="#sharing">Data Sharing and Third Parties</a></li>
-        <li><a href="#retention">Data Retention and Deletion</a></li>
-        <li><a href="#children">Children’s Privacy</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#changes">Changes to This Privacy Policy</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#support">Support</a></li>
-        <li><a href="#how-to">How to Use LifeCue</a></li>
-        <li><a href="#requirements">System Requirements</a></li>
-      </ul>
-    </div>
+<section class="card" id="privacy">
+<h2>Privacy Policy</h2>
+<p>LifeCue is designed to help you manage reminders and related information directly on your iPhone. LifeCue does not operate its own backend or cloud service for storing your LifeCue data.</p>
 
-    <section class="card" id="privacy">
-      <h2>Privacy Policy</h2>
-      <p>This Privacy Policy describes how the LifeCue iOS application (“LifeCue,” “the app”) handles information. It is based on the current LifeCue V1 implementation.</p>
-      <p>LifeCue is designed to work on your iPhone without creating an account. Reminder data is stored using Apple SwiftData on the device. LifeCue’s source code does not include a LifeCue backend, cloud database, analytics SDK, crash-reporting SDK, or advertising SDK, and it does not call cloud LLM APIs.</p>
-      <p>This policy does <strong>not</strong> claim that information can never leave your device. You can export a backup file or forward reminder text using Apple’s system sharing and document interfaces. Those destinations are chosen by you. In addition, Apple’s operating system may include app data in an iOS device backup if you have device backup enabled. LifeCue does not implement its own iCloud or CloudKit sync.</p>
-    </section>
+<div class="summary">
+<h3>Privacy at a Glance</h3>
+<ul>
+<li>No LifeCue account or registration is required.</li>
+<li>LifeCue does not operate its own backend or cloud service.</li>
+<li>No advertising, analytics, or third-party crash-reporting SDKs are used.</li>
+<li>Reminder, People, and Context information is stored locally by the app.</li>
+<li>Image text recognition is performed using Apple's Vision framework.</li>
+<li>Backups are created only when you choose to export them.</li>
+<li>You control where exported or shared files are sent using iOS features.</li>
+</ul>
+</div>
 
-    <section class="card" id="glance">
-      <h2>Privacy at a Glance</h2>
-      <div class="glance">
-        <div>
-          <strong>Account</strong>
-          LifeCue does not require registration or login.
-        </div>
-        <div>
-          <strong>Where data is stored</strong>
-          Reminders, People, and Contexts are stored locally with SwiftData. Preferences such as appearance and default reminder time are stored in UserDefaults.
-        </div>
-        <div>
-          <strong>LifeCue servers</strong>
-          The app source does not include LifeCue server or API communication.
-        </div>
-        <div>
-          <strong>Analytics and ads</strong>
-          No analytics, crash-reporting, or advertising SDKs are present in the project.
-        </div>
-        <div>
-          <strong>Photos</strong>
-          Images are used to extract reminder details on the device. Image bytes are not part of the SwiftData reminder, person, or context records.
-        </div>
-        <div>
-          <strong>Your exports</strong>
-          Backup files and forwarded text leave LifeCue only when you choose Export Backup or Forward and pick a destination.
-        </div>
-      </div>
-    </section>
+<h3>1. Information Stored by LifeCue</h3>
+<p>LifeCue stores information locally on your device to provide its reminder and organization features. Depending on how you use the app, this includes:</p>
+<ul>
+<li>Reminder titles, dates, times, time zones, notes, and status</li>
+<li>Recurring reminder rules and reminder timestamps</li>
+<li>People names and optional relationship information</li>
+<li>People icons, colors, and archived status</li>
+<li>Context names, optional associated people, icons, colors, and archived status</li>
+<li>Reminder associations with People and Contexts</li>
+<li>Application settings and backup-reminder preferences</li>
+</ul>
 
-    <section class="card" id="stores">
-      <h2>Information the App Stores</h2>
-      <p>On your device, LifeCue stores:</p>
-      <ul>
-        <li><strong>Reminders</strong> — title, event date, optional time, time zone, optional note, optional links to a Person and Context, status (active or completed), schedule rules, optional snooze time, and timestamps.</li>
-        <li><strong>People</strong> (optional) — name, optional relationship, display icon and color, archived flag, and timestamps. People records do not include phone numbers, email addresses, or similar contact fields.</li>
-        <li><strong>Contexts</strong> (optional) — name, optional associated Person, display icon and color, archived flag, and timestamps.</li>
-        <li><strong>Settings</strong> — appearance (system, light, or dark) and default reminder time, in UserDefaults.</li>
-        <li><strong>Backup reminder preferences</strong> — whether a local backup reminder notification is enabled, the interval you chose, and the last-export timestamp recorded on this device.</li>
-      </ul>
-      <p>Local notifications scheduled by LifeCue include the reminder title and a date/time summary. Backup reminder notifications use a fixed title and body that do not include reminder contents.</p>
-      <p>Calendar events are read from Apple Calendar (EventKit) when you use Calendar features. LifeCue does not write calendar events and does not persist your calendar database inside LifeCue’s SwiftData store.</p>
-    </section>
+<h3>2. Photos and Image Information</h3>
+<p>LifeCue can let you take a photo or select an image for information extraction. The app does not upload these images to a LifeCue server.</p>
+<p>Image text recognition uses Apple's Vision framework on the device. Extracted information is treated as a draft until you confirm it. LifeCue does not store image files as part of its reminder, People, or Context records.</p>
 
-    <section class="card" id="photos">
-      <h2>Photos and Image Information</h2>
-      <p>You can create a reminder draft from a photo by using the camera, choosing an image with the system photo picker, or uploading an image from within LifeCue. LifeCue does not appear in the iOS incoming Share Sheet.</p>
-      <p>Text is recognized on the device using Apple’s Vision framework (<code>VNRecognizeTextRequest</code>). A local deterministic parser then proposes reminder fields such as title, date, time, and note. Extraction can be incomplete or incorrect. You review and confirm before a reminder is created. LifeCue does not schedule a notification from an unconfirmed draft.</p>
-      <p>The project does not use VisionKit, Foundation Models, Apple Intelligence APIs, or cloud OCR APIs. Image processing is performed by Apple Vision and LifeCue’s local parser.</p>
-      <p>SwiftData reminder, person, and context records do not store image files. If you confirm a reminder after extraction, LifeCue stores the reminder fields you confirm (for example title, date, time, and note), not the original photo. Recognized text is not written to application logs in the OCR modules.</p>
-      <p>LifeCue does not include code that uploads images to a LifeCue server. There is no photo-library “add-only” or full-library usage string in the project; photo selection uses the system picker.</p>
-    </section>
+<h3>3. Calendar Access</h3>
+<p>LifeCue can request calendar access to read upcoming calendar information when you choose to use calendar-related functionality. Calendar information is fetched for display and organization.</p>
+<p>LifeCue does not create or modify calendar events.</p>
 
-    <section class="card" id="reminders">
-      <h2>Reminders</h2>
-      <p>Reminders are created in the app, stored locally, and can trigger local notifications through UserNotifications. You can complete, edit, snooze, reschedule, or delete reminders in the app. Deleting a reminder removes it from the local store and cancels its LifeCue-scheduled notifications.</p>
-      <p>Forward creates editable plain text from a reminder and presents Apple’s share sheet. LifeCue does not send that text itself. If you share to Messages, Mail, or another destination, that destination’s privacy terms apply.</p>
-    </section>
+<h3>4. Notifications</h3>
+<p>LifeCue uses Apple's notification system to schedule local reminder notifications. Notifications are generated by the device for reminders you create. LifeCue does not operate a remote notification server for your reminders.</p>
 
-    <section class="card" id="people">
-      <h2>People and Contexts</h2>
-      <p>People and Contexts are optional labels you can create to organize reminders. They are stored locally. The same context name can exist for different people as separate records. LifeCue does not require you to add people or contexts in order to create a reminder.</p>
-    </section>
+<h3>5. Backup and Restore</h3>
+<p>When you choose <strong>Export Backup</strong>, LifeCue creates a <strong>.lifecuebackup</strong> file containing your People, Contexts, and reminders.</p>
+<p>The backup file is a readable JSON-based file and is not encrypted by LifeCue. You are responsible for protecting an exported backup file and choosing an appropriate storage location.</p>
+<p>When you choose to restore a backup, LifeCue imports the selected backup file and replaces the corresponding local LifeCue data.</p>
+<p>LifeCue does not upload your backup to a LifeCue-operated server. If you choose to store or share a backup using iCloud Drive, Google Drive, AirDrop, email, messaging, or another destination available through iOS, that destination is governed by the provider's own privacy practices.</p>
 
-    <section class="card" id="backup">
-      <h2>Backup and Restore</h2>
-      <p>LifeCue does not automatically create backup files. When you choose Export Backup, the app writes a <code>.lifecuebackup</code> JSON document and presents the system file exporter so you can save it to Files, iCloud Drive, another location provided by iOS, AirDrop, or a third-party storage app you have installed.</p>
-      <p>A backup file contains your People, Contexts, and Reminders (including notes, schedule rules, and related identifiers). It does not include notification request identifiers or image files. Restore replaces current LifeCue data on the device with the contents of a valid backup you import. Invalid or unsupported backups are rejected and leave existing device data unchanged.</p>
-      <p>Optional Backup Reminder is a local notification that reminds you to export. It does not create or upload a backup.</p>
-    </section>
+<h3>6. Sharing and Export</h3>
+<p>LifeCue can use Apple's system sharing interface when you choose to share information. LifeCue does not control the third-party service or destination you select from the iOS share sheet.</p>
 
-    <section class="card" id="permissions">
-      <h2>Permissions</h2>
-      <p>LifeCue requests system permissions only for features that need them:</p>
-      <ul>
-        <li><strong>Camera</strong> — so you can capture a photo of a note or document to read on the device. Requested when you use Camera.</li>
-        <li><strong>Calendar (full access)</strong> — so LifeCue can optionally show upcoming calendar events and prefill reminder details. Requested when you use Calendar features. LifeCue’s calendar code is read-only; it does not create or modify calendar events.</li>
-        <li><strong>Notifications</strong> — so LifeCue can deliver local reminder alerts and, if enabled, backup reminders. Requested when scheduling requires authorization.</li>
-      </ul>
-      <p>You can deny any permission. Camera, Calendar, and notifications are not required to create a manual reminder. You can change permissions later in iOS Settings.</p>
-    </section>
+<h3>7. Information Sent to LifeCue Servers</h3>
+<p>LifeCue does not operate a backend service for receiving or storing your reminders, People, Contexts, or images. The app contains no LifeCue-operated network service for this purpose.</p>
 
-    <section class="card" id="sharing">
-      <h2>Data Sharing and Third Parties</h2>
-      <p>The LifeCue Xcode project does not include third-party analytics, advertising, crash-reporting, or social SDKs. It does not include a LifeCue backend or account service.</p>
-      <p>LifeCue uses Apple frameworks on the device, including SwiftUI, SwiftData, Vision, EventKit, UserNotifications, PhotosUI, and UIKit.</p>
-      <p>LifeCue does not sell personal information. The app does not transmit reminder contents to a LifeCue-operated service because no such service is implemented.</p>
-      <p>Information may leave the LifeCue app when you:</p>
-      <ul>
-        <li>export a backup and save or send the file somewhere you choose;</li>
-        <li>forward reminder text through the system share sheet;</li>
-        <li>use Apple services that are part of iOS (for example device backup, if you enable it on the iPhone).</li>
-      </ul>
-      <p>Those destinations are not operated by LifeCue. Their own policies apply.</p>
-    </section>
+<h3>8. Third-Party Services and Tracking</h3>
+<p>LifeCue does not use advertising SDKs, analytics SDKs, or third-party crash-reporting SDKs.</p>
+<p>LifeCue uses Apple system frameworks and services required for features such as local data persistence, image text recognition, calendar access, notifications, photo selection, and file sharing.</p>
 
-    <section class="card" id="retention">
-      <h2>Data Retention and Deletion</h2>
-      <p>LifeCue keeps reminder, person, and context records on the device until you delete them in the app, replace them by restoring a backup, or remove the app from the device.</p>
-      <p>Deleting LifeCue from the iPhone removes the app’s sandbox data on that device. Copies you previously exported (backup files) or forwarded remain wherever you saved or sent them. If you use iOS device backup, Apple’s backup may still contain a copy of app data according to your iPhone backup settings.</p>
-    </section>
+<h3>9. Permissions</h3>
+<ul>
+<li><strong>Camera:</strong> to capture photos within LifeCue.</li>
+<li><strong>Calendar:</strong> to read calendar information for calendar-related functionality.</li>
+<li><strong>Notifications:</strong> to deliver reminder notifications.</li>
+<li><strong>Photos:</strong> LifeCue uses Apple's PhotosPicker for selecting images; it does not require broad photo-library access.</li>
+</ul>
+<p>You can manage available permissions through iOS Settings.</p>
 
-    <section class="card" id="children">
-      <h2>Children’s Privacy</h2>
-      <p>LifeCue does not provide a child account, family sharing product, or age-gate. It does not collect information on LifeCue-operated servers. If you allow a child to use LifeCue on a device you control, the reminder data they enter is stored locally on that device like any other LifeCue data.</p>
-      <p>If you believe a child has used LifeCue in a way that concerns you, delete the relevant reminders or the app on that device, and contact us using the address below.</p>
-    </section>
+<h3>10. Data Retention and Deletion</h3>
+<p>LifeCue keeps its locally stored data while it is needed for the features you use. You can delete reminders and manage People and Contexts from within the app.</p>
+<p>Exported backup files are separate files under your control. Deleting a backup file from its storage location does not automatically change the local data currently stored in LifeCue.</p>
+<p>Removing the LifeCue app from an iPhone normally removes its local app data according to standard iOS behavior. If you use iOS device backup, Apple may include app data in that device backup according to your device backup settings and Apple's services.</p>
 
-    <section class="card" id="security">
-      <h2>Security</h2>
-      <p>LifeCue stores application data in the iOS app sandbox using SwiftData and UserDefaults. Access to Camera, Calendar, and Notifications is mediated by iOS permission prompts.</p>
-      <p>A backup file is an unencrypted JSON document. Anyone who can open that file can read the reminders, People, and Contexts inside it. Store exported backups in a place you trust.</p>
-      <p>No method of storage or transmission is perfectly secure. LifeCue does not operate a network service that would receive your reminders.</p>
-    </section>
+<h3>11. Security</h3>
+<p>LifeCue uses Apple's platform storage and security mechanisms for local application data. Exported LifeCue backup files are readable JSON files and do not have additional app-level encryption.</p>
+<p>You should protect exported backup files and only share them with destinations and people you trust.</p>
 
-    <section class="card" id="changes">
-      <h2>Changes to This Privacy Policy</h2>
-      <p>We may update this page when LifeCue’s behavior changes. The effective date at the top of this page will be revised when that happens. Continued use of LifeCue after an update means you should review the revised policy.</p>
-    </section>
+<h3>12. Children's Privacy</h3>
+<p>LifeCue does not require an account and does not operate a service for collecting children's personal information. The app stores its data locally and does not provide an online user-account system.</p>
 
-    <section class="card" id="contact">
-      <h2>Contact</h2>
-      <p>For privacy questions about LifeCue, email <a href="mailto:teamcentersap@gmail.com">teamcentersap@gmail.com</a>.</p>
-    </section>
+<h3>13. Changes to This Privacy Policy</h3>
+<p>We may update this Privacy Policy when LifeCue's features or privacy practices change. The effective date at the top of this page indicates the current version.</p>
 
-    <section class="card" id="support">
-      <h2>Support</h2>
-      <p>If something is not working, try the following:</p>
-      <ul>
-        <li>Confirm LifeCue has notification permission in iOS Settings if alerts are missing.</li>
-        <li>Confirm calendar permission if Calendar events do not appear.</li>
-        <li>Review extracted image details before creating a reminder; extraction is not always accurate.</li>
-        <li>Export a backup before restoring, because restore replaces current LifeCue data on the device.</li>
-      </ul>
-      <p>Contact support at <a href="mailto:teamcentersap@gmail.com">teamcentersap@gmail.com</a>. Please include the iOS version and a short description of the problem. Do not send screenshots that contain information you do not want stored in email.</p>
-    </section>
+<div class="contact"><strong>Privacy contact</strong><br><a href="mailto:teamcentersap@gmail.com">teamcentersap@gmail.com</a></div>
+</section>
 
-    <section class="card" id="how-to">
-      <h2>How to Use LifeCue</h2>
-      <h3>Create a reminder</h3>
-      <p>Open LifeCue and tap +. Choose Add Reminder, Photo, Camera, or Upload. Fill in or review the details, then create the reminder. Date-only reminders use the default reminder time from Settings in the reminder’s stored time zone.</p>
-      <h3>People and Contexts</h3>
-      <p>Both are optional. Use People for who a reminder is for, and Contexts for categories such as school or health. The same context name can exist separately for different people.</p>
-      <h3>Calendar</h3>
-      <p>LifeCue does not replace Apple Calendar. You can view upcoming events and prefill a reminder. LifeCue does not automatically create calendar events or reminders from the calendar.</p>
-      <h3>Image extraction</h3>
-      <p>Use Photo, Camera, or Upload. Always review title, date, time, and note before creating the reminder.</p>
-      <h3>Notifications</h3>
-      <p>Use Repeat, Limit Dates, and Remind me to control recurrence and when alerts fire relative to the event.</p>
-      <h3>Forward</h3>
-      <p>Open a reminder and choose Forward. You can edit the text before sharing. Editing the forwarded text does not change the stored reminder.</p>
-      <h3>Backup</h3>
-      <p>Use Backup &amp; Restore → Export Backup to create a <code>.lifecuebackup</code> file, then save it where you choose. Use Import Backup to restore. Backup Reminder only reminds you to export; it does not back up automatically.</p>
-    </section>
+<section class="card" id="support">
+<h2>Support</h2>
+<p>Need help with LifeCue? LifeCue is designed to provide a simple way to create, organize, schedule, and complete reminders.</p>
 
-    <section class="card" id="requirements">
-      <h2>System Requirements</h2>
-      <ul>
-        <li>iPhone</li>
-        <li>iOS 17.0 or later</li>
-        <li>Bundle identifier: <code>com.lifecue.app</code></li>
-      </ul>
-      <p>LifeCue V1 is an iPhone application. Camera, Calendar, and notifications require compatible device capabilities and the permissions described above.</p>
-    </section>
+<div class="support-grid">
+<div class="support-item"><strong>Reminders</strong><span>Create one-time or recurring reminders and choose when you want to be notified.</span></div>
+<div class="support-item"><strong>People</strong><span>Connect reminders with people and keep related information organized.</span></div>
+<div class="support-item"><strong>Contexts</strong><span>Organize reminders by places, situations, or other useful contexts.</span></div>
+<div class="support-item"><strong>Calendar</strong><span>Review relevant upcoming calendar information alongside your reminders.</span></div>
+<div class="support-item"><strong>Image Information</strong><span>Use your camera or image picker and let LifeCue extract text from an image.</span></div>
+<div class="support-item"><strong>Backup &amp; Restore</strong><span>Export your LifeCue data to a backup file and restore it when needed.</span></div>
+</div>
 
-    <footer>
-      <p>© 2026 LifeCue. All rights reserved.</p>
-      <p><a href="#top">Back to top</a></p>
-    </footer>
-  </div>
+<h3>How to Create a Reminder</h3>
+<ol>
+<li>Tap the <strong>+</strong> button on the LifeCue home screen.</li>
+<li>Choose <strong>Add Reminder</strong>.</li>
+<li>Enter a reminder title.</li>
+<li>Choose the date and, when needed, a reminder time.</li>
+<li>Select a repeat schedule such as once, daily, weekly, monthly, or yearly.</li>
+<li>Optionally associate the reminder with a Person or Context.</li>
+<li>Add an optional note and create the reminder.</li>
+</ol>
+
+<h3>Recurring Reminders</h3>
+<p>LifeCue supports one-time, daily, weekly, monthly, and yearly reminder schedules. Recurring reminders can also be limited to a defined date range when that option is enabled.</p>
+
+<h3>Managing a Reminder</h3>
+<p>Open a reminder to view its details. Depending on its state, you can snooze it, mark it complete, edit it, or delete it.</p>
+
+<h3>Backup and Restore</h3>
+<ol>
+<li>Open <strong>More</strong>.</li>
+<li>Choose <strong>Backup &amp; Restore</strong>.</li>
+<li>Select <strong>Export Backup</strong> to create a LifeCue backup file.</li>
+<li>Store the file in a location you trust.</li>
+<li>Use <strong>Import Backup</strong> when you need to restore data.</li>
+</ol>
+
+<h3>System Requirements</h3>
+<ul><li>iPhone</li><li>iOS 17.0 or later</li></ul>
+
+<p style="color:#66758a;font-size:.94rem;">Some LifeCue features require access to the corresponding iOS system capability, such as Camera, Calendar, or Notifications.</p>
+
+<div class="contact"><strong>Support contact</strong><br><a href="mailto:teamcentersap@gmail.com">teamcentersap@gmail.com</a></div>
+</section>
+</main>
+
+<footer>© 2026 LifeCue. All rights reserved.</footer>
 </body>
 </html>
