@@ -12,7 +12,7 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,B
 .topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}
 .topbar-inner{max-width:980px;margin:auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:11px;color:var(--text);text-decoration:none;font-weight:700;font-size:1.05rem}
-.brand-mark{width:34px;height:34px;border-radius:10px;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700}
+.brand-mark{width:34px;height:34px;border-radius:10px;display:block;object-fit:cover;flex-shrink:0}
 nav{display:flex;gap:22px}nav a{color:var(--secondary);text-decoration:none;font-weight:600;font-size:.94rem}nav a:hover{color:var(--accent)}
 main{max-width:980px;margin:42px auto;padding:0 24px 50px}
 .hero,.card{background:var(--surface);border:1px solid var(--border);box-shadow:0 8px 30px rgba(25,45,60,.06)}
@@ -40,7 +40,7 @@ footer{max-width:980px;margin:auto;padding:0 24px 42px;color:var(--muted);font-s
 <body>
 <header class="topbar">
 <div class="topbar-inner">
-<a class="brand" href="#top"><span class="brand-mark">L</span><span>LifeCue</span></a>
+<a class="brand" href="#top"><img class="brand-mark" src="./AppIcon.png" width="34" height="34" alt="LifeCue"><span>LifeCue</span></a>
 <nav><a href="#privacy">Privacy</a><a href="#support">Support</a></nav>
 </div>
 </header>
