@@ -16,6 +16,14 @@ enum LifeCueTheme {
     static let captionFont = Font.system(.subheadline, design: .default)
 }
 
+/// Readable column widths for regular-size (typically iPad) layouts.
+/// Compact (iPhone) layouts are unchanged.
+enum LifeCueLayoutMetrics {
+    static let readableContentMaxWidth: CGFloat = 720
+    static let formContentMaxWidth: CGFloat = 640
+    static let calendarContentMaxWidth: CGFloat = 900
+}
+
 struct LifeCueCardModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -26,8 +34,41 @@ struct LifeCueCardModifier: ViewModifier {
     }
 }
 
+/// Centers content with a max width on regular horizontal size class only.
+struct LifeCueReadableWidthModifier: ViewModifier {
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    let maxWidth: CGFloat
+
+    func body(content: Content) -> some View {
+        Group {
+            if horizontalSizeClass == .regular {
+                content
+                    .frame(maxWidth: maxWidth)
+                    .frame(maxWidth: .infinity)
+            } else {
+                content
+            }
+        }
+    }
+}
+
 extension View {
     func lifeCueCard() -> some View {
         modifier(LifeCueCardModifier())
+    }
+
+    /// Caps content width on iPad / regular width; no effect on compact (iPhone).
+    func lifeCueReadableContentWidth(
+        _ maxWidth: CGFloat = LifeCueLayoutMetrics.readableContentMaxWidth
+    ) -> some View {
+        modifier(LifeCueReadableWidthModifier(maxWidth: maxWidth))
+    }
+
+    func lifeCueFormContentWidth() -> some View {
+        lifeCueReadableContentWidth(LifeCueLayoutMetrics.formContentMaxWidth)
+    }
+
+    func lifeCueCalendarContentWidth() -> some View {
+        lifeCueReadableContentWidth(LifeCueLayoutMetrics.calendarContentMaxWidth)
     }
 }

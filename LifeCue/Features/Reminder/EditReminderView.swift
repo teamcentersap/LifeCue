@@ -112,6 +112,7 @@ struct EditReminderView: View {
                         .lineLimit(3...6)
                 }
             }
+            .lifeCueFormContentWidth()
             .navigationTitle("Edit Reminder")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

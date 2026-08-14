@@ -48,6 +48,7 @@ struct CalendarMonthView: View {
                 }
                 .padding(.horizontal, 16)
                 .padding(.bottom, 24)
+                .lifeCueCalendarContentWidth()
             }
             .background(LifeCueTheme.background.ignoresSafeArea())
             .navigationTitle("Calendar")

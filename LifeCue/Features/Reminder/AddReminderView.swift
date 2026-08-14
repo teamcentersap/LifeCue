@@ -111,6 +111,7 @@ struct AddReminderView: View {
                     }
                 )
             }
+            .lifeCueFormContentWidth()
             .navigationTitle("Add Reminder")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

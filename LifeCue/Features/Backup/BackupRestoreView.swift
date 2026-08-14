@@ -265,6 +265,7 @@ struct BackupRestoreView: View {
                 }
             }
         }
+        .lifeCueFormContentWidth()
         .navigationTitle("Backup & Restore")
         .alert("Backup", isPresented: Binding(
             get: { viewModel.errorMessage != nil },

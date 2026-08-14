@@ -43,6 +43,7 @@ struct OCRResultView: View {
                     .frame(maxWidth: .infinity)
             }
             .padding(20)
+            .lifeCueFormContentWidth()
         }
     }
 }
@@ -84,5 +85,6 @@ struct OCRFailureView: View {
             Spacer()
         }
         .padding(20)
+        .lifeCueFormContentWidth()
     }
 }

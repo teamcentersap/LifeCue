@@ -9,6 +9,7 @@ struct PrivacyView: View {
                 }
             }
         }
+        .lifeCueFormContentWidth()
         .navigationTitle("Privacy")
         .navigationBarTitleDisplayMode(.inline)
     }

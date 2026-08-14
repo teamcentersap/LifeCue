@@ -16,6 +16,7 @@ struct HelpView: View {
                 }
             }
         }
+        .lifeCueFormContentWidth()
         .navigationTitle("Help")
         .navigationBarTitleDisplayMode(.inline)
     }

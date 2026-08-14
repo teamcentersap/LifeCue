@@ -60,6 +60,7 @@ struct ContextsListView: View {
                 }
             }
         }
+        .lifeCueReadableContentWidth()
         .navigationTitle("Contexts")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -242,6 +243,7 @@ struct ContextDetailView: View {
                 Text("Permanent deletion removes this context. Reminders that use it are deleted only if you confirm.")
             }
         }
+        .lifeCueFormContentWidth()
         .navigationTitle(context.name)
         .onAppear {
             name = context.name

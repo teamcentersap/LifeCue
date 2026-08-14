@@ -526,6 +526,11 @@ def main() -> None:
         lines.append("\t\t\t\tINFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;")
         lines.append("\t\t\t\tINFOPLIST_KEY_UILaunchScreen_Generation = YES;")
         lines.append("\t\t\t\tINFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;")
+        lines.append(
+            '\t\t\t\tINFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = '
+            '"UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown '
+            'UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";'
+        )
         lines.append("\t\t\t\tLD_RUNPATH_SEARCH_PATHS = (")
         lines.append('\t\t\t\t\t"$(inherited)",')
         lines.append('\t\t\t\t\t"@executable_path/Frameworks",')
@@ -536,7 +541,7 @@ def main() -> None:
         lines.append('\t\t\t\tSUPPORTED_PLATFORMS = "iphoneos iphonesimulator";')
         lines.append("\t\t\t\tSUPPORTS_MACCATALYST = NO;")
         lines.append("\t\t\t\tSWIFT_EMIT_LOC_STRINGS = YES;")
-        lines.append("\t\t\t\tTARGETED_DEVICE_FAMILY = 1;")
+        lines.append('\t\t\t\tTARGETED_DEVICE_FAMILY = "1,2";')
         lines.append("\t\t\t};")
         lines.append(f"\t\t\tname = {name};")
         lines.append("\t\t};")
@@ -554,7 +559,7 @@ def main() -> None:
         lines.append("\t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = com.lifecue.app.tests;")
         lines.append('\t\t\t\tPRODUCT_NAME = "$(TARGET_NAME)";')
         lines.append('\t\t\t\tSUPPORTED_PLATFORMS = "iphoneos iphonesimulator";')
-        lines.append("\t\t\t\tTARGETED_DEVICE_FAMILY = 1;")
+        lines.append('\t\t\t\tTARGETED_DEVICE_FAMILY = "1,2";')
         lines.append(
             '\t\t\t\tTEST_HOST = '
             '"$(BUILT_PRODUCTS_DIR)/LifeCue.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LifeCue";'

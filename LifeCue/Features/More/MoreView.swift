@@ -55,6 +55,7 @@ struct MoreView: View {
                     Label(MoreNavigationPresentation.settingsLabel, systemImage: MoreNavigationPresentation.settingsSystemImage)
                 }
             }
+            .lifeCueReadableContentWidth()
             .navigationTitle("More")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

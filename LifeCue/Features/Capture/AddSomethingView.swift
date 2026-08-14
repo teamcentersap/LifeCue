@@ -61,6 +61,7 @@ struct AddSomethingView: View {
                 Spacer()
             }
             .padding(20)
+            .lifeCueFormContentWidth()
             .background(LifeCueTheme.background.ignoresSafeArea())
             .navigationTitle("LifeCue")
             .navigationBarTitleDisplayMode(.inline)

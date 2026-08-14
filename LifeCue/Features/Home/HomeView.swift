@@ -28,6 +28,7 @@ struct HomeView: View {
                     reminderList
                 }
             }
+            .lifeCueReadableContentWidth()
             .background(LifeCueTheme.background.ignoresSafeArea())
             .navigationTitle("LifeCue")
             .searchable(text: $viewModel.filterState.searchText, prompt: "Search reminders")

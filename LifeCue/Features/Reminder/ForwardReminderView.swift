@@ -58,6 +58,7 @@ struct ForwardReminderView: View {
                 .disabled(text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || isPresenting)
             }
             .padding(20)
+            .lifeCueFormContentWidth()
             .background(LifeCueTheme.background.ignoresSafeArea())
             .navigationTitle("Forward Reminder")
             .navigationBarTitleDisplayMode(.inline)

@@ -43,6 +43,7 @@ struct AboutLifeCueView: View {
                 }
             }
         }
+        .lifeCueFormContentWidth()
         .navigationTitle("About LifeCue")
         .navigationBarTitleDisplayMode(.inline)
     }

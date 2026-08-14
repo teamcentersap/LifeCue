@@ -197,6 +197,7 @@ struct ReminderDetailView: View {
                 .padding(.top, 8)
             }
             .padding(20)
+            .lifeCueReadableContentWidth()
         }
     }
 

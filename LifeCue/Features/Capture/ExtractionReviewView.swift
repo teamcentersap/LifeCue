@@ -78,6 +78,7 @@ struct ExtractionReviewView: View {
                     .disabled(viewModel.isCreating)
             }
             .padding(20)
+            .lifeCueFormContentWidth()
         }
         .background(LifeCueTheme.background.ignoresSafeArea())
         .sheet(isPresented: $viewModel.showRecognizedText) {

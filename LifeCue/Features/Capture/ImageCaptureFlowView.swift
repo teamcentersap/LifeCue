@@ -218,6 +218,7 @@ struct ImageCaptureFlowView: View {
             Spacer()
         }
         .padding(20)
+        .lifeCueFormContentWidth()
     }
 
     private var processingView: some View {

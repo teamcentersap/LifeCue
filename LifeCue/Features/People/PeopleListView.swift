@@ -62,6 +62,7 @@ struct PeopleListView: View {
                 }
             }
         }
+        .lifeCueReadableContentWidth()
         .navigationTitle("People")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -167,6 +168,7 @@ struct PersonDetailView: View {
                 Text("Permanent deletion removes this person and any personal contexts and reminders that belong to them.")
             }
         }
+        .lifeCueFormContentWidth()
         .navigationTitle(person.name)
         .onAppear {
             name = person.name

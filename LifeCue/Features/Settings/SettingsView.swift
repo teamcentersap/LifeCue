@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     let notificationScheduler: NotificationScheduling
 
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @State private var notificationStatus: NotificationAuthorizationStatus = .notDetermined
     @State private var defaultReminderTime: Date
     @State private var appearance: LifeCueAppearance
@@ -28,7 +29,7 @@ struct SettingsView: View {
                 LabeledContent("Notification Status", value: NotificationAuthorizationDisplay.label(for: notificationStatus))
 
                 if NotificationAuthorizationDisplay.showsOpenSettings(for: notificationStatus) {
-                    Button("Open iPhone Settings") {
+                    Button(openSettingsButtonTitle) {
                         openSystemSettings()
                     }
                 }
@@ -79,6 +80,7 @@ struct SettingsView: View {
                 }
             }
         }
+        .lifeCueFormContentWidth()
         .navigationTitle("Settings")
         .task {
             await refreshNotificationStatus()
@@ -86,6 +88,11 @@ struct SettingsView: View {
         .onAppear {
             Task { await refreshNotificationStatus() }
         }
+    }
+
+    private var openSettingsButtonTitle: String {
+        // Keep existing iPhone copy; use device-neutral wording on regular-width (iPad).
+        horizontalSizeClass == .regular ? "Open Settings" : "Open iPhone Settings"
     }
 
     private func refreshNotificationStatus() async {
