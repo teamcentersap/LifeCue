@@ -21,7 +21,8 @@ enum HelpContent {
         calendar,
         imageExtraction,
         backupAndRestore,
-        forwarding
+        forwarding,
+        lifeCuePro
     ]
 
     static var allQuestions: [HelpQuestion] {
@@ -236,6 +237,30 @@ enum HelpContent {
                 id: "fwd-edit",
                 question: "Does editing the forwarded text change my reminder?",
                 answer: "No. Forward text can be edited without changing the stored reminder."
+            )
+        ]
+    )
+
+    // MARK: - LifeCue Pro
+
+    private static let lifeCuePro = HelpSection(
+        id: "lifecue-pro",
+        title: "LifeCue Pro",
+        questions: [
+            HelpQuestion(
+                id: "pro-what",
+                question: "What is free?",
+                answer: "Manual reminders, notes, one-time notifications, snooze, complete, edit, optional People and Contexts, Home, and Calendar stay free."
+            ),
+            HelpQuestion(
+                id: "pro-includes",
+                question: "What does LifeCue Pro unlock?",
+                answer: "Photo and image capture with on-device extraction, repeating reminders, Forward, and Backup and Restore. One purchase. No subscription."
+            ),
+            HelpQuestion(
+                id: "pro-restore",
+                question: "How do I restore a purchase?",
+                answer: "Open Settings and tap Unlock Pro, then Restore Purchases. Use the same Apple ID. No LifeCue account is required."
             )
         ]
     )

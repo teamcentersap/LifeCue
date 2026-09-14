@@ -10,10 +10,12 @@ struct ReminderDetailView: View {
     @State private var reminder: Reminder?
     @State private var showEdit = false
     @State private var showForward = false
+    @State private var showPaywall = false
     @State private var showDeleteConfirm = false
     @State private var showSnoozeOptions = false
     @State private var errorMessage: String?
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var purchases: PurchaseManager
 
     private let forwardSharingService: ForwardSharingServing
 
@@ -53,7 +55,7 @@ struct ReminderDetailView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
                     Button("Edit") { showEdit = true }
-                    Button("Forward") { showForward = true }
+                    Button("Forward") { requestForward() }
                     if reminder?.status == .active {
                         Button("Snooze") { showSnoozeOptions = true }
                         Button("Complete") { Task { await complete() } }
@@ -63,6 +65,10 @@ struct ReminderDetailView: View {
                     Image(systemName: "ellipsis.circle")
                 }
             }
+        }
+        .sheet(isPresented: $showPaywall) {
+            ProUnlockView()
+                .environmentObject(purchases)
         }
         .sheet(isPresented: $showForward) {
             if let reminder {
@@ -212,6 +218,14 @@ struct ReminderDetailView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .lifeCueCard()
+    }
+
+    private func requestForward() {
+        if FeatureAccessPolicy.isLocked(.forward, isPro: purchases.hasProAccess) {
+            showPaywall = true
+        } else {
+            showForward = true
+        }
     }
 
     private func forwardText(for reminder: Reminder) -> String {

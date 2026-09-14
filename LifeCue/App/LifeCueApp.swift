@@ -8,6 +8,7 @@ struct LifeCueApp: App {
     private let notificationCenterDelegate: LifeCueNotificationCenterDelegate
     private let notificationNavigationStore: NotificationNavigationStore
     private let bootstrap: Result<LifeCueAppComposition, LifeCuePersistenceBootstrapError>
+    @StateObject private var purchases = PurchaseManager()
     @AppStorage(LifeCueSettings.appearanceKey) private var appearanceRaw = LifeCueAppearance.system.rawValue
     @Environment(\.scenePhase) private var scenePhase
 
@@ -42,11 +43,13 @@ struct LifeCueApp: App {
                     notificationScheduler: app.notificationScheduler,
                     notificationNavigation: notificationNavigationStore
                 )
+                .environmentObject(purchases)
                 .preferredColorScheme(
                     LifeCueAppearance(rawValue: appearanceRaw)?.preferredColorScheme
                 )
                 .modelContainer(app.container)
                 .task {
+                    await purchases.start()
                     _ = await app.reminderService.reconcileAllNotifications()
                     app.listViewModel.load()
                 }

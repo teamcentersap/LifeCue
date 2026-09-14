@@ -7,6 +7,8 @@ struct SettingsView: View {
     @State private var notificationStatus: NotificationAuthorizationStatus = .notDetermined
     @State private var defaultReminderTime: Date
     @State private var appearance: LifeCueAppearance
+    @State private var showPaywall = false
+    @EnvironmentObject private var purchases: PurchaseManager
 
     init(notificationScheduler: NotificationScheduling) {
         self.notificationScheduler = notificationScheduler
@@ -25,6 +27,25 @@ struct SettingsView: View {
 
     var body: some View {
         List {
+            Section("LifeCue Pro") {
+                if purchases.hasProAccess {
+                    Label("Pro unlocked", systemImage: "checkmark.seal.fill")
+                        .foregroundStyle(LifeCueTheme.today)
+                    Text("Photo capture, repeating reminders, Forward, and Backup are on.")
+                        .font(LifeCueTheme.captionFont)
+                        .foregroundStyle(LifeCueTheme.secondaryText)
+                } else {
+                    Button {
+                        showPaywall = true
+                    } label: {
+                        Label("Unlock Pro", systemImage: "lock.open.fill")
+                    }
+                    Text("One-time purchase via Apple. Reminders stay on this device.")
+                        .font(LifeCueTheme.captionFont)
+                        .foregroundStyle(LifeCueTheme.secondaryText)
+                }
+            }
+
             Section("Notifications") {
                 LabeledContent("Notification Status", value: NotificationAuthorizationDisplay.label(for: notificationStatus))
 
@@ -82,6 +103,10 @@ struct SettingsView: View {
         }
         .lifeCueFormContentWidth()
         .navigationTitle("Settings")
+        .sheet(isPresented: $showPaywall) {
+            ProUnlockView()
+                .environmentObject(purchases)
+        }
         .task {
             await refreshNotificationStatus()
         }

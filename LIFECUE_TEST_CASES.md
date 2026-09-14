@@ -537,6 +537,54 @@ Expected: - Reminder remains valid.
 
 ------------------------------------------------------------------------
 
+# 16a. In-App Purchase
+
+## TC-IAP-001 --- Free capture stays manual
+
+Priority: P0
+
+Steps: 1. Launch without Pro. 2. Tap +. 3. Choose Add Reminder.
+
+Expected: - Manual reminder form opens. - Reminder can be saved.
+
+## TC-IAP-002 --- Photo capture is locked
+
+Priority: P0
+
+Steps: 1. Launch without Pro. 2. Tap +. 3. Choose Upload Image or Take Photo.
+
+Expected: - Pro paywall opens. - No notification is scheduled.
+
+## TC-IAP-003 --- Repeating reminder is locked for new schedules
+
+Priority: P0
+
+Steps: 1. Launch without Pro. 2. Add Reminder. 3. Choose Every week.
+
+Expected: - Pro paywall opens. - Repeat stays Once unless already saved as repeating.
+
+## TC-IAP-004 --- Forward and Backup are locked
+
+Priority: P0
+
+Steps: 1. Open a reminder and choose Forward. 2. Open More then Backup and Restore.
+
+Expected: - Both open the Pro paywall.
+
+## TC-IAP-005 --- Restore
+
+Priority: P0
+
+Expected: - Restore Purchases is on the paywall. - No LifeCue account.
+
+## TC-IAP-006 --- Product ID
+
+Priority: P0
+
+Expected: - Product ID is `com.lifecue.app.pro.lifetime`. - Type is Non-Consumable.
+
+------------------------------------------------------------------------
+
 # 17. Privacy/Security
 
 ## TC-PRIV-001 --- No sensitive production logs
@@ -630,3 +678,4 @@ silent AI-like guessing.
 20. LifeCue is not an incoming Share Sheet destination.
 21. V1 has no cloud AI dependency.
 22. V1 has no backend dependency.
+23. LifeCue Pro IAP gates photo capture, repeating reminders, Forward, and Backup. Manual reminders stay free.

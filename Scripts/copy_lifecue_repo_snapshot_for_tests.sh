@@ -29,4 +29,8 @@ rsync -a --delete \
 cp "${SRCROOT}/LifeCue.xcodeproj/project.pbxproj" \
   "${DEST}/LifeCue.xcodeproj/project.pbxproj"
 
+mkdir -p "${DEST}/LifeCue/Resources"
+cp "${SRCROOT}/LifeCue/Resources/Configuration.storekit" \
+  "${DEST}/LifeCue/Resources/Configuration.storekit"
+
 echo "Copied LifeCue repo snapshot for tests → ${DEST}"

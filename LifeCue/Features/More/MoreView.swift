@@ -15,6 +15,8 @@ struct MoreView: View {
 
     @State private var openBackupRestore = false
     @State private var showHelp = false
+    @State private var showPaywall = false
+    @EnvironmentObject private var purchases: PurchaseManager
 
     var body: some View {
         NavigationStack {
@@ -43,11 +45,7 @@ struct MoreView: View {
                     Label("Contexts", systemImage: "folder")
                 }
 
-                NavigationLink {
-                    backupRestoreView
-                } label: {
-                    Label("Backup & Restore", systemImage: "externaldrive")
-                }
+                backupRow
 
                 NavigationLink {
                     SettingsView(notificationScheduler: notificationScheduler)
@@ -67,6 +65,10 @@ struct MoreView: View {
                     .accessibilityLabel(MoreNavigationPresentation.helpToolbarAccessibilityLabel)
                 }
             }
+            .sheet(isPresented: $showPaywall) {
+                ProUnlockView()
+                    .environmentObject(purchases)
+            }
             .navigationDestination(isPresented: $showHelp) {
                 HelpView()
             }
@@ -75,7 +77,31 @@ struct MoreView: View {
                     .onAppear { notificationNavigation.consumePendingBackupRestore() }
             }
             .onChange(of: notificationNavigation.pendingOpenBackupRestore) { _, pending in
-                if pending { openBackupRestore = true }
+                if pending {
+                    if FeatureAccessPolicy.allows(.backup, isPro: purchases.hasProAccess) {
+                        openBackupRestore = true
+                    } else {
+                        notificationNavigation.consumePendingBackupRestore()
+                        showPaywall = true
+                    }
+                }
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var backupRow: some View {
+        if FeatureAccessPolicy.allows(.backup, isPro: purchases.hasProAccess) {
+            NavigationLink {
+                backupRestoreView
+            } label: {
+                Label("Backup & Restore", systemImage: "externaldrive")
+            }
+        } else {
+            Button {
+                showPaywall = true
+            } label: {
+                Label("Backup & Restore", systemImage: "lock.fill")
             }
         }
     }

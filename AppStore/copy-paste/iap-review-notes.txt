@@ -1,0 +1,3 @@
+Non-consumable lifetime unlock. Product ID com.lifecue.app.pro.lifetime.
+
+Tap + then Upload Image or Take Photo to open the paywall. Repeating schedules, Forward, and Backup also open the same screen. Add Reminder stays free. Restore Purchases is on the paywall. Sandbox Apple ID. No login.

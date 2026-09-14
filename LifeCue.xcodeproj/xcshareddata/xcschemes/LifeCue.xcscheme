@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A24BD68E8B054DC8AAB2AF48"
+               BlueprintIdentifier = "35C86296E87343598B371449"
                BuildableName = "LifeCue.app"
                BlueprintName = "LifeCue"
                ReferencedContainer = "container:LifeCue.xcodeproj">
@@ -46,7 +46,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1DF8BBDE8D642389079D148"
+               BlueprintIdentifier = "9DEA514921D44C8ABB1A39C4"
                BuildableName = "LifeCueTests.xctest"
                BlueprintName = "LifeCueTests"
                ReferencedContainer = "container:LifeCue.xcodeproj">
@@ -68,12 +68,15 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A24BD68E8B054DC8AAB2AF48"
+            BlueprintIdentifier = "35C86296E87343598B371449"
             BuildableName = "LifeCue.app"
             BlueprintName = "LifeCue"
             ReferencedContainer = "container:LifeCue.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <StoreKitConfigurationFileReference
+         identifier = "../../LifeCue/Resources/Configuration.storekit">
+      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -85,7 +88,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A24BD68E8B054DC8AAB2AF48"
+            BlueprintIdentifier = "35C86296E87343598B371449"
             BuildableName = "LifeCue.app"
             BlueprintName = "LifeCue"
             ReferencedContainer = "container:LifeCue.xcodeproj">

@@ -205,15 +205,26 @@ struct ReminderScheduleFormSections: View {
     var scheduleCalendar: Calendar
     /// Reminder event date used to seed a newly enabled Limit dates window.
     var eventDate: Date
+    @EnvironmentObject private var purchases: PurchaseManager
+    @State private var showPaywall = false
 
     var body: some View {
+        Group {
         Section("Repeat") {
-            Picker("Remind me", selection: $model.repeatMode) {
+            Picker("Remind me", selection: repeatModeSelection) {
                 ForEach(ReminderRepeatMode.allCases) { mode in
                     Text(mode.title).tag(mode)
                 }
             }
             .pickerStyle(.inline)
+
+            if FeatureAccessPolicy.isLocked(.recurrence, isPro: purchases.hasProAccess) {
+                Button {
+                    showPaywall = true
+                } label: {
+                    Label("Repeating reminders are LifeCue Pro", systemImage: "lock.fill")
+                }
+            }
 
             if model.repeatMode == .weekly {
                 Text("Repeat on")
@@ -290,6 +301,25 @@ struct ReminderScheduleFormSections: View {
                 .font(.footnote)
                 .foregroundStyle(.secondary)
         }
+        }
+        .sheet(isPresented: $showPaywall) {
+            ProUnlockView()
+                .environmentObject(purchases)
+        }
+    }
+
+    private var repeatModeSelection: Binding<ReminderRepeatMode> {
+        Binding(
+            get: { model.repeatMode },
+            set: { newValue in
+                if newValue != .once,
+                   FeatureAccessPolicy.isLocked(.recurrence, isPro: purchases.hasProAccess) {
+                    showPaywall = true
+                    return
+                }
+                model.repeatMode = newValue
+            }
+        )
     }
 
     /// Compact DatePicker labels flip between short/medium styles (and widths), which also

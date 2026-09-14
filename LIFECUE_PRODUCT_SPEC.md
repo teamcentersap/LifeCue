@@ -69,6 +69,13 @@ supporting optional organization for users who want more structure.
 -   Forward reminder text using the iOS system sharing mechanism
 -   Local persistence
 -   Local notifications
+-   Non-consumable LifeCue Pro lifetime IAP (`com.lifecue.app.pro.lifetime`)
+
+Free in V1 with IAP: manual reminders, notes, one-time notifications,
+snooze/complete/edit, optional People and Contexts, Home, Calendar.
+
+Pro: Upload Image / Take Photo, on-device extraction, repeating /
+yearly / date-window reminders, Forward, Backup and Restore.
 
 ## Explicitly excluded from V1
 
@@ -92,7 +99,7 @@ supporting optional organization for users who want more structure.
 -   Location-triggered reminders
 -   Conditional external monitoring
 -   Social/community features
--   Complex subscription infrastructure unless required for launch
+-   Subscriptions (LifeCue Pro is a one-time non-consumable unlock)
 
 ------------------------------------------------------------------------
 

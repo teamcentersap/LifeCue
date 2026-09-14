@@ -1,0 +1,21 @@
+LifeCue is a private on-device reminder app. There is no login.
+
+This version adds LifeCue Pro Lifetime, a non-consumable in-app purchase.
+
+Product ID: com.lifecue.app.pro.lifetime
+Type: Non-Consumable
+
+Free: tap + and Add Reminder. Home, Calendar, People, and Contexts stay available. Snooze, complete, and edit stay free.
+
+Pro: Upload Image, Take Photo, repeating reminders, Forward, and Backup and Restore.
+
+How to review IAP:
+1. Allow Notifications and Camera when prompted.
+2. Tap + then Upload Image or Take Photo. These open the Pro paywall.
+3. Or create a manual reminder and choose a repeating schedule. That opens the paywall.
+4. Or open a reminder and choose Forward.
+5. Or open More then Backup and Restore.
+6. Settings also has Unlock Pro. Restore Purchases is on the paywall.
+7. Use a sandbox Apple ID. No app account or login is required.
+
+Image extraction creates a draft only. No notification is scheduled until the user confirms.

@@ -46,7 +46,7 @@ def main() -> None:
         "src_app", "src_tests", "res_app", "fw_app", "fw_tests",
         "app_cfgs", "test_cfgs", "proj_cfgs",
         "app_dbg", "app_rel", "test_dbg", "test_rel", "proj_dbg", "proj_rel",
-        "assets_ref", "assets_build",
+        "assets_ref", "assets_build", "storekit_ref", "storekit_build",
         "dep", "proxy",
         "copy_repo_snapshot",
         "g_app", "g_design", "g_domain", "g_models", "g_class", "g_engine",
@@ -55,7 +55,7 @@ def main() -> None:
         "g_calendar_services", "g_forward", "g_backup_services", "g_settings_services",
         "g_features", "g_calendar_features", "g_home", "g_reminder",
         "g_people", "g_more", "g_backup_features", "g_help", "g_settings_features",
-        "g_capture", "g_placeholders", "g_root", "g_resources",
+        "g_capture", "g_placeholders", "g_root", "g_resources", "g_purchases", "g_pro",
         "g_ocr_domain", "g_extraction_domain",
     ]}
 
@@ -89,6 +89,10 @@ def main() -> None:
     lines.append(
         f"\t\t{ids['assets_build']} /* Assets.xcassets in Resources */ = "
         f"{{isa = PBXBuildFile; fileRef = {ids['assets_ref']} /* Assets.xcassets */; }};"
+    )
+    lines.append(
+        f"\t\t{ids['storekit_build']} /* Configuration.storekit in Resources */ = "
+        f"{{isa = PBXBuildFile; fileRef = {ids['storekit_ref']} /* Configuration.storekit */; }};"
     )
     lines.append("/* End PBXBuildFile section */")
     lines.append("")
@@ -127,6 +131,11 @@ def main() -> None:
     lines.append(
         f"\t\t{ids['assets_ref']} /* Assets.xcassets */ = {{isa = PBXFileReference; "
         'lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; '
+        'sourceTree = "<group>"; };'
+    )
+    lines.append(
+        f"\t\t{ids['storekit_ref']} /* Configuration.storekit */ = {{isa = PBXFileReference; "
+        'lastKnownFileType = text; path = Configuration.storekit; '
         'sourceTree = "<group>"; };'
     )
     lines.append("/* End PBXFileReference section */")
@@ -187,6 +196,7 @@ def main() -> None:
         "LifeCue/Services/Forward",
         "LifeCue/Services/Backup",
         "LifeCue/Services/Settings",
+        "LifeCue/Services/Purchases",
         "LifeCue/Features/Home",
         "LifeCue/Features/Reminder",
         "LifeCue/Features/Calendar",
@@ -198,6 +208,7 @@ def main() -> None:
         "LifeCue/Features/Backup",
         "LifeCue/Features/Help",
         "LifeCue/Features/Settings",
+        "LifeCue/Features/Pro",
     ]
 
     grouped: Dict[str, List[str]] = {
@@ -244,6 +255,7 @@ def main() -> None:
     emit_group(ids["g_forward"], "Forward", "Forward", leaf_children("LifeCue/Services/Forward"))
     emit_group(ids["g_backup_services"], "Backup", "Backup", leaf_children("LifeCue/Services/Backup"))
     emit_group(ids["g_settings_services"], "Settings", "Settings", leaf_children("LifeCue/Services/Settings"))
+    emit_group(ids["g_purchases"], "Purchases", "Purchases", leaf_children("LifeCue/Services/Purchases"))
     emit_group(ids["g_services"], "Services", "Services", [
         f"{ids['g_persist']} /* Persistence */",
         f"{ids['g_notifications']} /* Notifications */",
@@ -253,6 +265,7 @@ def main() -> None:
         f"{ids['g_forward']} /* Forward */",
         f"{ids['g_backup_services']} /* Backup */",
         f"{ids['g_settings_services']} /* Settings */",
+        f"{ids['g_purchases']} /* Purchases */",
     ])
     emit_group(ids["g_home"], "Home", "Home", leaf_children("LifeCue/Features/Home"))
     emit_group(ids["g_reminder"], "Reminder", "Reminder", leaf_children("LifeCue/Features/Reminder"))
@@ -265,6 +278,7 @@ def main() -> None:
     emit_group(ids["g_backup_features"], "Backup", "Backup", leaf_children("LifeCue/Features/Backup"))
     emit_group(ids["g_help"], "Help", "Help", leaf_children("LifeCue/Features/Help"))
     emit_group(ids["g_settings_features"], "Settings", "Settings", leaf_children("LifeCue/Features/Settings"))
+    emit_group(ids["g_pro"], "Pro", "Pro", leaf_children("LifeCue/Features/Pro"))
     emit_group(ids["g_features"], "Features", "Features", [
         f"{ids['g_home']} /* Home */",
         f"{ids['g_calendar_features']} /* Calendar */",
@@ -277,9 +291,11 @@ def main() -> None:
         f"{ids['g_backup_features']} /* Backup */",
         f"{ids['g_help']} /* Help */",
         f"{ids['g_settings_features']} /* Settings */",
+        f"{ids['g_pro']} /* Pro */",
     ])
     emit_group(ids["g_resources"], "Resources", "Resources", [
         f"{ids['assets_ref']} /* Assets.xcassets */",
+        f"{ids['storekit_ref']} /* Configuration.storekit */",
     ])
     emit_group(ids["app_group"], "LifeCue", "LifeCue", [
         f"{ids['g_app']} /* App */",
@@ -404,6 +420,7 @@ def main() -> None:
     lines.append("\t\t\tbuildActionMask = 2147483647;")
     lines.append("\t\t\tfiles = (")
     lines.append(f"\t\t\t\t{ids['assets_build']} /* Assets.xcassets in Resources */,")
+    lines.append(f"\t\t\t\t{ids['storekit_build']} /* Configuration.storekit in Resources */,")
     lines.append("\t\t\t);")
     lines.append("\t\t\trunOnlyForDeploymentPostprocessing = 0;")
     lines.append("\t\t};")
@@ -513,7 +530,7 @@ def main() -> None:
         lines.append("\t\t\t\tASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;")
         lines.append("\t\t\t\tASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;")
         lines.append("\t\t\t\tCODE_SIGN_STYLE = Automatic;")
-        lines.append("\t\t\t\tCURRENT_PROJECT_VERSION = 1;")
+        lines.append("\t\t\t\tCURRENT_PROJECT_VERSION = 3;")
         lines.append("\t\t\t\tDEVELOPMENT_TEAM = 8N3N7WP2A9;")
         lines.append("\t\t\t\tENABLE_PREVIEWS = YES;")
         lines.append("\t\t\t\tGENERATE_INFOPLIST_FILE = YES;")
@@ -535,7 +552,7 @@ def main() -> None:
         lines.append('\t\t\t\t\t"$(inherited)",')
         lines.append('\t\t\t\t\t"@executable_path/Frameworks",')
         lines.append("\t\t\t\t);")
-        lines.append("\t\t\t\tMARKETING_VERSION = 1.0;")
+        lines.append("\t\t\t\tMARKETING_VERSION = 1.1.0;")
         lines.append("\t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = com.lifecue.app;")
         lines.append('\t\t\t\tPRODUCT_NAME = "$(TARGET_NAME)";')
         lines.append('\t\t\t\tSUPPORTED_PLATFORMS = "iphoneos iphonesimulator";')
@@ -552,10 +569,10 @@ def main() -> None:
         lines.append("\t\t\tbuildSettings = {")
         lines.append('\t\t\t\tBUNDLE_LOADER = "$(TEST_HOST)";')
         lines.append("\t\t\t\tCODE_SIGN_STYLE = Automatic;")
-        lines.append("\t\t\t\tCURRENT_PROJECT_VERSION = 1;")
+        lines.append("\t\t\t\tCURRENT_PROJECT_VERSION = 3;")
         lines.append("\t\t\t\tGENERATE_INFOPLIST_FILE = YES;")
         lines.append("\t\t\t\tIPHONEOS_DEPLOYMENT_TARGET = 17.0;")
-        lines.append("\t\t\t\tMARKETING_VERSION = 1.0;")
+        lines.append("\t\t\t\tMARKETING_VERSION = 1.1.0;")
         lines.append("\t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = com.lifecue.app.tests;")
         lines.append('\t\t\t\tPRODUCT_NAME = "$(TARGET_NAME)";')
         lines.append('\t\t\t\tSUPPORTED_PLATFORMS = "iphoneos iphonesimulator";')

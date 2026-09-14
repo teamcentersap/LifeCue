@@ -24,6 +24,8 @@ struct AddSomethingView: View {
     }
 
     @State private var presented: PresentedSheet?
+    @State private var showPaywall = false
+    @EnvironmentObject private var purchases: PurchaseManager
 
     var body: some View {
         NavigationStack {
@@ -44,18 +46,26 @@ struct AddSomethingView: View {
 
                 choiceButton(
                     title: "Upload Image",
-                    subtitle: "Extract information from an image",
-                    systemImage: "photo.on.rectangle"
+                    subtitle: FeatureAccessPolicy.allows(.imageCapture, isPro: purchases.hasProAccess)
+                        ? "Extract information from an image"
+                        : "LifeCue Pro",
+                    systemImage: FeatureAccessPolicy.allows(.imageCapture, isPro: purchases.hasProAccess)
+                        ? "photo.on.rectangle"
+                        : "lock.fill"
                 ) {
-                    presented = .capture(.library)
+                    requestImageCapture(.library)
                 }
 
                 choiceButton(
                     title: "Take Photo",
-                    subtitle: "Capture a document or note",
-                    systemImage: "camera"
+                    subtitle: FeatureAccessPolicy.allows(.imageCapture, isPro: purchases.hasProAccess)
+                        ? "Capture a document or note"
+                        : "LifeCue Pro",
+                    systemImage: FeatureAccessPolicy.allows(.imageCapture, isPro: purchases.hasProAccess)
+                        ? "camera"
+                        : "lock.fill"
                 ) {
-                    presented = .capture(.camera)
+                    requestImageCapture(.camera)
                 }
 
                 Spacer()
@@ -69,6 +79,10 @@ struct AddSomethingView: View {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel", action: onCancel)
                 }
+            }
+            .sheet(isPresented: $showPaywall) {
+                ProUnlockView()
+                    .environmentObject(purchases)
             }
             .sheet(item: $presented) { item in
                 switch item {
@@ -103,6 +117,14 @@ struct AddSomethingView: View {
                     )
                 }
             }
+        }
+    }
+
+    private func requestImageCapture(_ source: ImageCaptureFlowView.Source) {
+        if FeatureAccessPolicy.isLocked(.imageCapture, isPro: purchases.hasProAccess) {
+            showPaywall = true
+        } else {
+            presented = .capture(source)
         }
     }
 

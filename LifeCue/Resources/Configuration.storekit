@@ -1,0 +1,30 @@
+{
+  "identifier" : "LifeCue",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "LCPRO001",
+      "localizations" : [
+        {
+          "description" : "Lifetime unlock for LifeCue Pro tools.",
+          "displayName" : "LifeCue Pro Lifetime",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.lifecue.app.pro.lifetime",
+      "referenceName" : "LifeCue Pro Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_storeKitErrors" : []
+  },
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
